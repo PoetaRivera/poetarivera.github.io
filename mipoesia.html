@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poesía de Nelson Rivera</title>
+</head>
+<style>
+  @font-face {
+    font-family: "AlmendraDisplay-Regular";
+    src: url("fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
+  }
+
+  /* Definición variables de color*/
+  :root {
+    --Morado: #ede7f6;
+  }
+
+  :root {
+    --100: #d1c4e9;
+  }
+
+  :root {
+    --A100: #b388ff;
+  }
+
+  :root {
+    --A200: #7C4DFF;
+  }
+
+  :root {
+    --A400: #651FFF;
+  }
+
+  :root {
+    --A700: #6200ea;
+  }
+
+  body {
+    background-color: #000;
+  }
+
+  #pagina {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  #barraprincipalpoesia {
+    display: flex;
+    flex-grow: 1;
+    background-image: repeating-radial-gradient(#6200ea, #d1c4e9);
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-family: "AlmendraDisplay-Regular";
+    font-size: em;
+  }
+
+  #links {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.75;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #d1c4e9;
+    margin-top: 10px;
+    gap: 3px;
+    height: 75px;
+  }
+
+  #links a {
+    box-shadow: 3px 3px 3px #000;
+    padding: 10px 10px;
+    border: 1px solid var(--A700);
+    border-radius: 5px;
+    background-color: #b388ff;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+  }
+
+
+  #titulopoema {
+    flex-grow: 1;
+  }
+
+  #textopoemas {
+    flex-grow: 1;
+    border-style: solid;
+    border-color: #6200ea;
+    border-width: 2px;
+  }
+
+
+
+  #links a:hover {
+    background-color: white;
+    color: var(--A100);
+  }
+
+  #a5 {
+    margin-right: 20px;
+  }
+
+
+
+  #menus {
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+    background-color: #d1c4e9;
+    justify-content: flex-start;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+
+
+  .libros>li {
+    float: left;
+  }
+
+  .libros li {
+
+    display: block;
+    background-color: #651FFF;
+    color: #fff;
+    padding: 10px 10px;
+    font-size: small;
+
+    box-shadow: 3px 3px 3px #000;
+    border: 1px solid var(--A700);
+    border-radius: 5px;
+    background-color: var(--A100);
+
+  }
+
+  .libros li:hover {
+    background-color: #434343;
+  }
+
+  .libros li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+  }
+
+  .libros li:hover>ul {
+    display: block;
+  }
+
+  .listavoces {
+    text-align: center;
+    font-size: medium;
+    color: #000;
+  }
+
+  #titulopoema {
+    height: auto;
+  }
+
+  h2 {
+    color: #6200ea;
+    text-align: center;
+    vertical-align: top;
+    letter-spacing: 2px;
+    font-size: larger;
+  }
+
+  #modulo1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 6;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1c4e9;
+    gap: 2px;
+  }
+
+  #audio {
+    margin-top: 6px;
+    margin-bottom: 2px;
+    opacity: 0.15;
+  }
+
+  #texto {
+    background-color: #d1c4e9;
+    border-color: #000;
+    color: white;
+  }
+</style>
+
+<script src="jquery-3.6.0.js"></script>
+
+<script>
+
+  $(document).ready(function () {
+    //libro:Voces del alma/sección amor
+    $("#libro1").mouseover(ponertitulo)
+    $("#amor1 li").click(presentar);
+    $("#desamor1 li").click(presentar);
+    $("#deseo1 li").click(presentar);
+    $("#vida1 li").click(presentar);
+
+    $("#libro2").mouseover(ponertitulo);
+    $("#amor2 li").click(presentar);
+    $("#intimidad li").click(presentar);
+    $("#anoranza li").click(presentar);
+    $("#vida2 li").click(presentar);
+
+    $("#libro3").mouseover(ponertitulo)
+    $("#amor3 li").click(presentar);
+    $("#varios li").click(presentar);
+    
+  });
+
+  //Cambia el titulo del libro y la portada según el menú
+  function ponertitulo(e) {
+    if (e.target == libro1) {
+      $("#enlace1").replaceWith('<h2 id="enlace1">Libro: Voces del alma</h2>');
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/vocesdelalma.png"> </iframe>');
+    } else if (e.target == libro2) {
+      $("#enlace1").replaceWith('<h2 id="enlace1">Libro: El perfume de la espera</h2>');
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/elperfumedelaespera.png"> </iframe>');
+    } else if (e.target == libro3) {
+      $("#enlace1").replaceWith('<h2 id="enlace1">Libro: Relatos y poemas</h2>');
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/relatosypoemas.png"> </iframe>');
+    }
+  }
+
+  function presentar(e) {
+    //libro:Voces del alma/sección amor
+    if (e.target == p1) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/comosabersilaamas/comosabersilaamas.html"> </iframe>');
+
+    } else if (e.target == p2) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/cuandomisojostecontemplan/cuandomisojostecontemplan.html"> </iframe>');
+
+    } else if (e.target == p3) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/quisieraserungranpoeta/quisieraserungranpoeta.html"> </iframe>');
+
+    } else if (e.target == p4) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/eres/eres.html"> </iframe>');
+
+    } else if (e.target == p5) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/unidosporlapoesia/unidosporlapoesia.html"> </iframe>');
+
+    } else if (e.target == p6) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/asiesella/asiesella.html"> </iframe>');
+
+    }
+    //libro:Voces del alma/sección desamor
+    else if (e.target == p7) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/teextrano/teextrano.html"> </iframe>');
+
+    } else if (e.target == p8) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/envano/envano.html"> </iframe>');
+
+    } else if (e.target == p9) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/hedeolvidarte/hedeolvidarte.html"> </iframe>');
+
+    } else if (e.target == p10) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/brisadeoctubre/brisadeoctubre.html"> </iframe>');
+
+    } else if (e.target == p11) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/teame1/teame1.html"> </iframe>');
+
+    }
+    //libro:Voces del alma/sección/Deseo
+    else if (e.target == p12) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/instanteprimero/instanteprimero.html"> </iframe>');
+
+    } else if (e.target == p13) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/amandote1/amandote1.html"> </iframe>');
+
+    } else if (e.target == p14) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/amandote2/amandote2.html"> </iframe>');
+
+    }
+
+    //libro:Voces del alma/sección/A la vida
+    else if (e.target == p15) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/haymomentos/haymomentos.html"> </iframe>');
+
+    } else if (e.target == p16) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/noterindas/noterindas.html"> </iframe>');
+
+    } else if (e.target == p17) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/lafelicidad/lafelicidad.html"> </iframe>');
+
+    } else if (e.target == p18) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/elmendigo/elmendigo.html"> </iframe>');
+
+    } else if (e.target == p19) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/vocesdelalma/undia/undia.html"> </iframe>');
+
+    }
+
+    //libro:El perfume de la espera/sección amor
+    else if (e.target == p20) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/amantesenelalmendro/amantesenelalmendro.html"> </iframe>');
+
+    } else if (e.target == p21) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/subitosoplo/subitosoplo.html"> </iframe>');
+
+    } else if (e.target == p22) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/lejania/lejania.html"> </iframe>');
+
+    } else if (e.target == p23) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/enmiventana/enmiventana.html"> </iframe>');
+
+    } else if (e.target == p24) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/ansiosoespero/ansiosoespero.html"> </iframe>');
+
+    } else if (e.target == p25) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/estadistancia/estadistancia.html"> </iframe>');
+
+    }
+    //libro:El perfume de la espera/sección Intimidades
+    else if (e.target == p26) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/amandose1/amandose1.html"> </iframe>');
+
+    } else if (e.target == p27) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/amandose3/amandose3.html"> </iframe>');
+
+    } else if (e.target == p28) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/ellayel/ellayel.html"> </iframe>');
+
+    } else if (e.target == p29) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/sombrafurtiva/sombrafurtiva.html"> </iframe>');
+
+    } else if (e.target == p30) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/riomio/riomio.html"> </iframe>');
+
+
+      //libro:El perfume de la espera/sección/Añoranza
+    } else if (e.target == p31) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/aquiyolaespero/aquiyolaespero.html"> </iframe>');
+
+    } else if (e.target == p32) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/fuistemia/fuistemia.html"> </iframe>');
+
+    } else if (e.target == p33) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/suenosdeshojados/suenosdeshojados.html"> </iframe>');
+
+    } else if (e.target == p34) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/mivaquera/mivaquera.html"> </iframe>');
+
+    } else if (e.target == p35) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/supartida/supartida.html"> </iframe>');
+
+    } else if (e.target == p36) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/susonrisa/susonrisa.html"> </iframe>');
+
+    } else if (e.target == p37) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/ame/ame.html"> </iframe>');
+
+    } else if (e.target == p38) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/quizateolvideundia/quizateolvideundia.html"> </iframe>');
+
+    } else if (e.target == p39) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/siduermeustedprimero/siduermeustedprimero.html"> </iframe>');
+
+
+      //libro:El perfume de la espera/sección/A la vida
+    } else if (e.target == p40) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/elperfumedelaespera/volviendoasonar/volviendoasonar.html"> </iframe>');
+
+    } else if (e.target == p41) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/somos/somos.html"> </iframe>');
+
+    } else if (e.target == p42) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/elperfumedelaespera/lanina/lanina.html"> </iframe>');
+
+
+//libro:Relatos y poemas/sección amor
+    } else if (e.target == p43) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/amores/amores.html"> </iframe>');
+
+    } else if (e.target == p44) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/hayamores/hayamores.html"> </iframe>');
+
+    } else if (e.target == p45) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/ella/ella.html"> </iframe>');
+
+    } else if (e.target == p46) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/conlamirada/conlamirada.html"> </iframe>');
+
+    }else if (e.target == p47) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/unamorquenuncallego/unamorquenuncallego.html"> </iframe>');
+
+      //libro:Relatos y poemas/sección varios
+    }else if (e.target == p48) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/noche/noche.html"> </iframe>');
+
+    } else if (e.target == p49) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/sefue/sefue.html"> </iframe>');
+
+    } else if (e.target == p50) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/elarribo/elarribo.html"> </iframe>');
+
+    } else if (e.target == p51) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/ninodelacalle/ninodelacalle.html"> </iframe>');
+
+    } else if (e.target == p52) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/corazondetorogoz/corazondetorogoz.html"> </iframe>');
+
+    } else if (e.target == p53) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/quiza/quiza.html"> </iframe>');
+
+    } else if (e.target == p54) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/suenostruncados/suenostruncados.html"> </iframe>');
+
+    } else if (e.target == p55) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/ellallevaunhijo/ellallevaunhijo.html"> </iframe>');
+
+    } else if (e.target == p56) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/diatriste/diatriste.html"> </iframe>');
+
+    } else if (e.target == p57) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="http://127.0.0.1:5500/poemas/relatosypoemas/micentroamerica/micentroamerica.html"> </iframe>');
+
+    }
+
+
+
+  }
+</script>
+
+<body>
+  <div id="pagina">
+    <div id="barraprincipalpoesia">
+      <div>
+        <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
+      </div>
+      <div id="titulo">
+        <h1>Poesía de Nelson Rivera</h1>
+      </div>
+      <div>
+        <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
+      </div>
+    </div>
+
+    <div id="links">
+      <a id="a1" href="acercademi.html">Acerca<br />
+        de mí</a>
+      <a id="a2" href="index.html">Mi<br />
+        inicio
+      </a>
+      <a id="a3" href="misrelato.html">Mis<br />
+        relatos</a>
+      <a id="a4" href="mislibros.html">Mis <br />libros</a>
+      <a id="a5" href="misfotos.html">Mis<br />
+        fotos</a>
+    </div>
+
+    <div id="menus">
+
+      <ul class="libros">
+        <li id="libros">Seleciona un libro
+          <ul>
+            <li id="libro1">Voces del alma
+              <ul>
+                <div>
+                  <li class="listavoces">Amor
+                    <ul id="amor1">
+                      <li id="p1">Cómo saber que la amas</li>
+                      <li id="p2">Cuando mis ojos te contemplan</li>
+                      <li id="p3">Quisiera ser un gran poeta</li>
+                      <li id="p4"> Eres...</li>
+                      <li id="p5">Unidos por la poesía</li>
+                      <li id="p6">Así es ella</li>
+                    </ul>
+
+                  </li>
+                  <li class="listavoces">Desamor
+                    <ul id="desamor1">
+                      <li id="p7">Te extraño</li>
+                      <li id="p8">En vano</li>
+                      <li id="p9">He de olvidarte</li>
+                      <li id="p10">Brisa de octubre</li>
+                      <li id="p11">Te amé I
+                    </ul>
+
+                  </li>
+                  <li class="listavoces">Deseo
+                    <ul id="deseo1">
+                      <li id="p12">Instante primero</li>
+                      <li id="p13">Amandote I</li>
+                      <li id="p14">Amandote II</li>
+                    </ul>
+                  </li>
+                  <li class="listavoces">A la vida
+                    <ul id="vida1">
+                      <li id="p15">Hay momentos</li>
+                      <li id="p16">No te rindas</li>
+                      <li id="p17">La felicidad</li>
+                      <li id="p18">El mendigo</li>
+                      <li id="p19">Un día</li>
+                    </ul>
+                  </li>
+
+                </div>
+
+              </ul>
+            </li>
+            <li id="libro2">El perfume de la espera
+              <ul>
+                <div>
+                  <li class="listavoces">Amor
+                    <ul id="amor2">
+                      <li id="p20">Amantes en el almendro</li>
+                      <li id="p21">Súbito soplo</li>
+                      <li id="p22">Lejanía</li>
+                      <li id="p23"> En mi ventana</li>
+                      <li id="p24">Ansioso espero</li>
+                      <li id="p25">Esta distancia</li>
+                    </ul>
+
+                  </li>
+                  <li class="listavoces">Intimidades
+                    <ul id="intimidad">
+                      <li id="p26">Amándose I</li>
+                      <li id="p27">Amándose III</li>
+                      <li id="p28">Ella y él</li>
+                      <li id="p29">Sombra furtiva</li>
+                      <li id="p30">Río mío
+                    </ul>
+
+                  </li>
+                  <li class="listavoces">Añoranza
+                    <ul id="anoranza">
+                      <li id="p31">Aquí yo la espero</li>
+                      <li id="p32">fuiste mía</li>
+                      <li id="p33">Sueños deshojados</li>
+                      <li id="p34">Mi vaquera</li>
+                      <li id="p35">Su partida</li>
+                      <li id="p36">Su sonrisa</li>
+                      <li id="p37">Amé</li>
+                      <li id="p38">Quizá te olvide un día</li>
+                      <li id="p39">Si duerme usted primero</li>
+
+                    </ul>
+                  </li>
+                  <li class="listavoces">Vida
+                    <ul id="vida2">
+                      <li id="p40">Volviendo a soñar</li>
+                      <li id="p41">Somos</li>
+                      <li id="p42">La niña</li>
+
+
+
+                    </ul>
+                  </li>
+
+                </div>
+
+              </ul>
+            </li>
+            <li id="libro3">Relatos y poemas
+              <ul>
+                <div>
+                  <li class="listavoces">Amor
+                    <ul id="amor3">
+                      <li id="p43">Amor es...</li>
+                      <li id="p44">Hay amores...</li>
+                      <li id="p45">Ella</li>
+                      <li id="p46"> Con la mirada...</li>
+                      <li id="p47">Un amor que nunca llegó</li>
+                    </ul>
+                  </li>
+
+                  <li class="listavoces">Varios
+                    <ul id="varios">
+                      <li id="p48">Noche</li>
+                      <li id="p49">Se fue</li>
+                      <li id="p50">El arribo</li>
+                      <li id="p51">Niño de la calle</li>
+                      <li id="p52">Corazón de torogoz
+                      <li id="p53">Quizá</li>
+                      <li id="p54">Sueños truncados</li>
+                      <li id="p55">Ella lleva un hijo</li>
+                      <li id="p56">Día triste</li>
+                      <li id="p57">Mi Centro América</li>
+                    </ul>
+                  </li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+
+    </div>
+
+    <div id="titulopoema">
+      <h2 id="enlace1">Mis Libros</h2>
+    </div>
+
+    <div id="modulo1">
+      <div id="audios">
+        <audio controls id="audio">
+          <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
+          Tu navegador no admite mp3
+        </audio>
+      </div>
+
+      <div id="textopoemas">
+        <iframe id="texto" title="Texto de poema" height="600px" width="400px" aling="center"
+          src="http://127.0.0.1:5500/imagenes/elperfumedelaespera.png">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
