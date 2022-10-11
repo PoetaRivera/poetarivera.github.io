@@ -231,20 +231,21 @@
   function ponertitulo(e) {
     if (e.target == libro1) {
       $("#enlace1").replaceWith('<h2 id="enlace1">Libro: Voces del alma</h2>');
-      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/vocesdelalma.png"> </iframe>');
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/vocesdelalma.jpg"> </iframe>');
     } else if (e.target == libro2) {
       $("#enlace1").replaceWith('<h2 id="enlace1">Libro: El perfume de la espera</h2>');
-      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/elperfumedelaespera.png"> </iframe>');
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/elperfumedelaespera.jpg"> </iframe>');
     } else if (e.target == libro3) {
       $("#enlace1").replaceWith('<h2 id="enlace1">Libro: Relatos y poemas</h2>');
-      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/relatosypoemas.png"> </iframe>');
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/relatosypoemas.jpg"> </iframe>');
     }
   }
-
+ 
   function presentar(e) {
-    //libro:Voces del alma/sección amor
+    
+       //libro:Voces del alma/sección amor
     if (e.target == p1) {
-      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="poemas/vocesdelalma/comosabersilaamas.html"> </iframe>');
+      $("#texto").replaceWith('< remplazar src="poemas/vocesdelalma/comosabersilaamas.html"> </iframe>');
 
     } else if (e.target == p2) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="poemas/vocesdelalma/cuandomisojostecontemplan.html"> </iframe>');
@@ -621,7 +622,7 @@
 
       <div id="textopoemas">
         <iframe id="texto" title="Texto de poema" height="600px" width="400px" aling="center"
-          src="imagenes/elperfumedelaespera.png">
+          src="imagenes/elperfumedelaespera.jpg">
         </iframe>
       </div>
     </div>
