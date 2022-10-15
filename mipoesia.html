@@ -219,7 +219,7 @@
     $("#amor2 li").mouseover(presentar);
     $("#intimidad li").mouseover(presentar);
     $("#anoranza li").mouseover(presentar);
-    $("#vida2 li").click(presentar);
+    $("#vida2 li").mouseover(presentar);
 
     $("#libro3").mouseover(ponertitulo)
     $("#amor3 li").mouseover(presentar);
@@ -613,6 +613,13 @@
     </div>
 
     <div id="modulo1">
+      
+      <div id="textopoemas">
+        <iframe id="texto" title="Texto de poema" height="600px" width="400px" aling="center"
+          src="imagenes/elperfumedelaespera.jpg">
+        </iframe>
+      </div>
+
       <div id="audios">
         <audio controls id="audio">
           <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
@@ -620,11 +627,6 @@
         </audio>
       </div>
 
-      <div id="textopoemas">
-        <iframe id="texto" title="Texto de poema" height="600px" width="400px" aling="center"
-          src="imagenes/elperfumedelaespera.jpg">
-        </iframe>
-      </div>
     </div>
   </div>
 </body>
