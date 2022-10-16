@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-size: 12pt
+}
+
+h2,
+p {
+    margin: 0pt;
+    color: black;
+}
+
+h2 {
+    margin-bottom: 0pt;
+    text-align: center;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    line-height: normal;
+    font-family: 'Times New Roman';
+    font-size: 14pt;
+    font-weight: normal;
+   
+}
+
+span.Ttulo2Car {
+    font-family: 'Times New Roman';
+    font-size: 14pt;
+    
+}
