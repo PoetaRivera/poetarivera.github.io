@@ -56,7 +56,7 @@
   #pagina {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap:3px;
   }
 
   #barraprincipalpoesia {
@@ -74,7 +74,7 @@
     letter-spacing: 2px;
     word-spacing: 4px;
     font-family: "AlmendraDisplay-Regular";
-    font-size: 24;
+    font-size: 24px;
   }
 
   #links {
@@ -101,6 +101,56 @@
     font-size: medium;
   }
 
+  #a5 {
+    margin-right: 20px;
+  }
+
+  #audios{
+    display: flex;
+    justify-content: center;
+  }
+  #audio {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  #menus {
+    display: flex;
+    background-color: #d1c4e9;
+    justify-content: flex-start;
+  }
+
+ .libros li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+  }
+
+  .listavoces {
+    text-align: center;
+    font-size: medium;
+    color: #000;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .libros>li {
+    float: left;
+  }
+
+  .libros li {
+    display: block;
+    background-color: #651FFF;
+    color: #fff;
+    padding: 10px 10px;
+    font-size: medium;
+    box-shadow: 3px 3px 3px #000;
+    border: 1px solid var(--A700);
+    border-radius: 5px;
+    background-color: var(--A100);
+  }
 
   #titulopoema {
     flex-grow: 1;
@@ -110,73 +160,7 @@
     flex-grow: 1;
     border-style: solid;
     border-color: #6200ea;
-    border-width: 2px;
-  }
-
-
-
-  #links a:hover {
-    background-color: white;
-    color: var(--A100);
-  }
-
-  #a5 {
-    margin-right: 20px;
-  }
-
-
-
-  #menus {
-    display: flex;
-    flex-flow: row;
-    gap: 10px;
-    background-color: #d1c4e9;
-    justify-content: flex-start;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-
-
-  .libros>li {
-    float: left;
-  }
-
-  .libros li {
-
-    display: block;
-    background-color: #651FFF;
-    color: #fff;
-    padding: 10px 10px;
-    font-size: medium;
-
-    box-shadow: 3px 3px 3px #000;
-    border: 1px solid var(--A700);
-    border-radius: 5px;
-    background-color: var(--A100);
-
-  }
-
-  .libros li:hover {
-    background-color: #434343;
-  }
-
-  .libros li ul {
-    display: none;
-    position: absolute;
-    min-width: 140px;
-  }
-
-  .libros li:hover>ul {
-    display: block;
-  }
-
-  .listavoces {
-    text-align: center;
-    font-size: medium;
-    color: #000;
+    border-width: 3px;
   }
 
   #titulopoema {
@@ -201,16 +185,23 @@
     gap: 2px;
   }
 
-  #audio {
-    margin-top: 6px;
-    margin-bottom: 2px;
-    opacity: 0.15;
-  }
-
-  #texto {
+   #texto {
     background-color: #d1c4e9;
     border-color: #000;
     color: white;
+  }
+
+  .libros li:hover>ul {
+    display: block;
+  }
+
+  .libros li:hover {
+    background-color: #434343;
+  }
+
+  #links a:hover {
+    background-color: white;
+    color: var(--A100);
   }
 </style>
 
@@ -478,9 +469,14 @@
       <a id="a5" href="misfotos.html">Mis<br />
         fotos</a>
     </div>
+    <div id="audios">
+      <audio controls id="audio">
+        <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
+        Tu navegador no admite mp3
+      </audio>
+    </div>
 
     <div id="menus">
-
       <ul class="libros">
         <li id="libros">Seleciona un libro
           <ul>
@@ -524,9 +520,7 @@
                       <li id="p19">Un día</li>
                     </ul>
                   </li>
-
                 </div>
-
               </ul>
             </li>
             <li id="libro2">El perfume de la espera
@@ -541,7 +535,6 @@
                       <li id="p24">Ansioso espero</li>
                       <li id="p25">Esta distancia</li>
                     </ul>
-
                   </li>
                   <li class="listavoces">Intimidades
                     <ul id="intimidad">
@@ -551,7 +544,6 @@
                       <li id="p29">Sombra furtiva</li>
                       <li id="p30">Río mío
                     </ul>
-
                   </li>
                   <li class="listavoces">Añoranza
                     <ul id="anoranza">
@@ -564,7 +556,6 @@
                       <li id="p37">Amé</li>
                       <li id="p38">Quizá te olvide un día</li>
                       <li id="p39">Si duerme usted primero</li>
-
                     </ul>
                   </li>
                   <li class="listavoces">Vida
@@ -572,14 +563,9 @@
                       <li id="p40">Volviendo a soñar</li>
                       <li id="p41">Somos</li>
                       <li id="p42">La niña</li>
-
-
-
                     </ul>
                   </li>
-
                 </div>
-
               </ul>
             </li>
             <li id="libro3">Relatos y poemas
@@ -594,7 +580,6 @@
                       <li id="p47">Un amor que nunca llegó</li>
                     </ul>
                   </li>
-
                   <li class="listavoces">Varios
                     <ul id="varios">
                       <li id="p48">Noche</li>
@@ -615,28 +600,21 @@
           </ul>
         </li>
       </ul>
-
-
+      
     </div>
 
     <div id="titulopoema">
-      <h2 id="enlace1">Mis Libros</h2>
+      <h2 id="enlace1">Mis Poemas</h2>
     </div>
 
     <div id="modulo1">
-      
       <div id="textopoemas">
         <iframe id="texto" title="Texto de poema" height="600px" width="400px" aling="center"
           src="imagenes/elperfumedelaespera.jpg">
         </iframe>
       </div>
 
-      <div id="audios">
-        <audio controls id="audio">
-          <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
-          Tu navegador no admite mp3
-        </audio>
-      </div>
+     
 
     </div>
   </div>
