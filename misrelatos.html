@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poesía de Nelson Rivera</title>
+</head>
+
+<!-- Google tag (gtag.js) google analitica -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-VE3290LDLF');
+</script>
+
+<style>
+  @font-face {
+    font-family: "AlmendraDisplay-Regular";
+    src: url("fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
+  }
+
+  /* Definición variables de color*/
+  :root {
+    --Morado: #ede7f6;
+  }
+
+  :root {
+    --100: #d1c4e9;
+  }
+
+  :root {
+    --A100: #b388ff;
+  }
+
+  :root {
+    --A200: #7C4DFF;
+  }
+
+  :root {
+    --A400: #651FFF;
+  }
+
+  :root {
+    --A700: #6200ea;
+  }
+
+  body {
+    background-color: #000;
+  }
+
+  #pagina {
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+  }
+
+  #barraprincipalpoesia {
+    display: flex;
+    flex-grow: 1;
+    background-image: repeating-radial-gradient(#6200ea, #d1c4e9);
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-family: "AlmendraDisplay-Regular";
+    font-size: 24px;
+  }
+
+  #links {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.75;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #d1c4e9;
+    margin-top: 10px;
+    gap: 3px;
+    height: 75px;
+  }
+
+  #links a {
+    box-shadow: 3px 3px 3px #000;
+    padding: 10px 10px;
+    border: 1px solid var(--A700);
+    border-radius: 5px;
+    background-color: #b388ff;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+  }
+
+  #a5 {
+    margin-right: 20px;
+  }
+
+  #audios{
+    display: flex;
+    justify-content: center;
+  }
+  #audio {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  #menus {
+    display: flex;
+    background-color: #d1c4e9;
+    justify-content: flex-start;
+  }
+
+ .libros li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+  }
+
+  .listavoces {
+    text-align: center;
+    font-size: medium;
+    color: #000;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .libros>li {
+    float: left;
+  }
+
+  .libros li {
+    display: block;
+    background-color: #651FFF;
+    color: #fff;
+    padding: 10px 10px;
+    font-size: medium;
+    box-shadow: 3px 3px 3px #000;
+    border: 1px solid var(--A700);
+    border-radius: 5px;
+    background-color: var(--A100);
+  }
+
+  #titulopoema {
+    flex-grow: 1;
+  }
+
+  #textopoemas {
+    flex-grow: 1;
+    border-style: solid;
+    border-color: #6200ea;
+    border-width: 3px;
+  }
+
+  #titulopoema {
+    height: auto;
+  }
+
+  h2 {
+    color: #6200ea;
+    text-align: center;
+    vertical-align: top;
+    letter-spacing: 2px;
+    font-size: x-large;
+  }
+
+  #modulo1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 6;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1c4e9;
+    gap: 2px;
+  }
+
+   #texto {
+    background-color: #d1c4e9;
+    border-color: #000;
+    color: white;
+  }
+
+  .libros li:hover>ul {
+    display: block;
+  }
+
+  .libros li:hover {
+    background-color: #434343;
+  }
+
+  #links a:hover {
+    background-color: white;
+    color: var(--A100);
+  }
+</style>
+
+<script src="jquery-3.6.0.js"></script>
+
+<script>
+
+  $(document).ready(function () {
+    //Relatos
+    $("#relato").mouseover(ponertitulo)
+    $("#relato li").mouseover(presentar);
+   
+    
+  });
+
+  //coloca el titulo del libro y la portada.
+  function ponertitulo(e) {
+    if (e.target == relato) {
+      $("#enlace1").replaceWith('<h2 id="enlace1">Libro: Relatos y poemas</h2>');
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="imagenes/relatosypoemas.jpg"> </iframe>');
+    } 
+  }
+ 
+  function presentar(e) {
+    
+       //libro:Voces del alma/sección amor
+    if (e.target == r1) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="relatos/lagotita/lagotita.html"> </iframe>');
+
+    } else if (e.target == r2) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="relatos/el/el.html"> </iframe>');
+
+    } else if (e.target == r3) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="relatos/unalmayyo/unalmayyo.html"> </iframe>');
+
+    } else if (e.target == r4) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="relatos/proximamente.html"> </iframe>');
+
+    } else if (e.target == r5) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="relatos/proximamente.html"> </iframe>');
+
+    } else if (e.target == r6) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="relatos/proximamente.html"> </iframe>');
+
+    }else if (e.target == r7) {
+      $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="450px" src="relatos/proximamente.html"> </iframe>');
+
+    }
+   
+
+
+  }
+</script>
+
+<body>
+  <div id="pagina">
+    <div id="barraprincipalpoesia">
+      <div>
+        <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
+      </div>
+      <div id="titulo">
+        <h1>Poesía de Nelson Rivera</h1>
+      </div>
+      <div>
+        <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
+      </div>
+    </div>
+
+    <div id="links">
+      <a id="a1" href="acercademi.html">Acerca<br />
+        de mí</a>
+      <a id="a2" href="index.html">El<br />
+        inicio
+      </a>
+      <a id="a3" href="mipoesia.html">Mi<br />
+        poesía</a>
+      <a id="a4" href="mislibros.html">Mis <br />libros</a>
+      <a id="a5" href="misnovelas.html">Mis<br />
+        novelas</a>
+    </div>
+    <div id="audios">
+      <audio controls id="audio">
+        <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
+        Tu navegador no admite mp3
+      </audio>
+    </div>
+
+    <div id="menus">
+      <ul class="libros">
+        <li id="relato">Seleciona un Relato
+          <ul>
+            <li id="r1">La Gotita
+            <li id="r2">Él</li>
+            <li id="r3">Un alma y yo</li>
+            <li id="r4">Próximamente...</li>
+            <li id="r5">Próximamente...</li>
+            <li id="p6">Próximamente...</li>
+            <li id="p7">Próximamente...</li>
+        </li>
+      </ul>
+      
+    </div>
+
+    <div id="titulorelato">
+      <h2 id="enlace1">Mis Relatos</h2>
+    </div>
+
+    <div id="modulo1">
+      <div id="textopoemas">
+        <iframe id="texto" title="Texto de poema" height="600px" width="400px" aling="center"
+          src="imagenes/relatosypoemas.jpg">
+        </iframe>
+      </div>
+
+     
+
+    </div>
+  </div>
+</body>
+
+</html>
