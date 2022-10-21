@@ -22,8 +22,8 @@
       display: grid;
       grid-template-columns: 1fr 175px 175px 1fr;
       grid-template-rows: 350px 350px 350px 350px 350px;
-      column-gap: 30px;
-
+      column-gap: 10px;
+      row-gap: 10px;  
     }
 
     a {
@@ -33,6 +33,7 @@
 
     .resena {
       display: flex;
+      flex-direction: column;
 
     }
 
@@ -54,6 +55,15 @@
     #titulo {
       color: white;
     }
+
+    .lib{
+     border-block-style: solid;
+     
+     border-top-color: #6200ea;
+     border-bottom-color:#6200ea; ;
+    }
+
+    
   </style>
 
 
@@ -62,26 +72,26 @@
 <body>
   <div id="libros">
     <div></div>
-    <div id="1">
+    <div class="lib">
       <img src="imagenes/vocesdelalma175.jpg" alt="" width="175px" height="261px">
     </div>
-    <div id="2">
-      <div clase="resena"><span>Reseña</span>
+    <div class="lib">
+      <div class="resena"><span>Reseña</span>
         <p>Voces del alma, eso es lo que es cada uno de estos escritos; voces en silencio que quieren ser escuchadas, voces que quieren contar de bellos momentos vividos, de dolores sufridos, de sabiduría ganda con  lágrimas y tiempo.</p>
       </div>
-      <span clase="titulo">Encuentralo en Amazon:</span>
+      <span class="titulo">Encuentralo en Amazon:</span>
 
        <a href="https://www.amazon.com/-/es/Nelson-Ren%C3%A9-Rivera/dp/1515311600/ref=sr_1_8?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1XBZ3BG76BB8R&keywords=nelson+rivera&qid=1666331074&s=books&sprefix=nelson+rivera%2Cstripbooks-intl-ship%2C115&sr=1-8"><span>Link
           a AMAZON:Voces del alma</span></a>
     </div>
     <div></div>
     <div></div>
-    <div id="3"><img src="imagenes/habiaunavezunalma175.jpg" alt="" width="175px" height="261px"></div>
-    <div id="4">
-      <div clase="resena"><span>Reseña</span>
+    <div class="lib"><img src="imagenes/habiaunavezunalma175.jpg" alt="" width="175px" height="261px"></div>
+    <div class="lib">
+      <div class="resena"><span>Reseña</span>
         <p>Es la historia de un alma como la tuya o como la mía. Nos relata el caminar de las almas; no solo en nuestro mundo, si no que nos describe su andar antes de venir: su estadía en Animunnás, el mundo donde residen las almas antes de nacer. </p>
       </div>
-      <span clase="titulo">Encuentralo en Amazon:</span>
+      <span class="titulo">Encuentralo en Amazon:</span>
 
       <a
         href="https://www.amazon.com/s?k=habia+una+vez+un+alma&i=stripbooks&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=JVU5WF0HWUDN&sprefix=habia+una+vez+un+alma%2Cstripbooks%2C125&ref=nb_sb_noss"><span>Link
@@ -89,12 +99,12 @@
     </div>
     <div></div>
     <div></div>
-    <div id="5"> <img src="imagenes/relatosypoemas175.jpg" alt="" width="175px" height="261px"></div>
-    <div id="6">
-      <div clase="resena"><span>Reseña</span>
+    <div class="lib"> <img src="imagenes/relatosypoemas175.jpg" alt="" width="175px" height="261px"></div>
+    <div class="lib">
+      <div class="resena"><span>Reseña</span>
         <p>Por más que pasen milenios y el hombre crezca en inteligencia y en sabiduría, y su tecnología linde lo inverosímil y la ciencia sea la única luz que lo guíe; nunca, jamás, dejará de anhelar en su vida un poco de fantasía.</p>
       </div>
-      <span clase="titulo">Encuentralo en Amazon:</span>
+      <span class="titulo">Encuentralo en Amazon:</span>
 
       <a
         href="https://www.amazon.com/-/es/Nelson-Rivera/dp/B08M8DBJN1/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2B66V6U7IYBWZ&keywords=relatos+y+poemas+nelson+rivera&qid=1666331379&s=books&sprefix=relatos+y+poemas+nelson+rivera%2Cstripbooks%2C123&sr=1-1"><span>Link
@@ -102,8 +112,8 @@
     </div>
     <div></div>
     <div></div>
-    <div id="7"> <img src="imagenes/elperfumedelaespera175.jpg" alt="" width="175px" height="261px"></div>
-    <div id="8">
+    <div class="lib"> <img src="imagenes/elperfumedelaespera175.jpg" alt="" width="175px" height="261px"></div>
+    <div class="lib">
       <div clase="resena"><span>Reseña</span>
         <p>Un apasionado poemario que avasalla los sentidos del lector; obligándolo a oler esa hechizada fragancia, letra a letra de cada poema; poesía donde se une la delicadeza y el salvajismo de dos plumas con esencias totalmente diferentes.
 
@@ -111,7 +121,7 @@
 
         </p>
       </div>
-      <span clase="titulo">Encuentralo en Amazon:</span>
+      <span class="titulo">Encuentralo en Amazon:</span>
 
       <a
         href="https://www.amazon.com/s?k=el+perfume+de+la+espera&i=stripbooks&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TM2N0BAG5KSS&sprefix=el+perfume+de+la+espera%2Cstripbooks%2C135&ref=nb_sb_noss"><span>Link
@@ -119,9 +129,9 @@
     </div>
     <div></div>
     <div></div>
-    <div id="9"> <img src="imagenes/unamorquenuncallego175.jpg" alt="" width="175px" height="261px"></div>
-    <div id="10">
-      <div clase="resena"><span>Reseña</span>
+    <div class="lib"> <img src="imagenes/unamorquenuncallego175.jpg" alt="" width="175px" height="261px"></div>
+    <div class="lib">
+      <div class="resena"><span>Reseña</span>
         <p>Es la historia de amor de dos escritores,
           es la historia de Sarah y Carlo.
           Nos relata el riesgozo camino de Carlo
@@ -129,7 +139,7 @@
           de la lucha de ella, por lograr el ansiado
           sueño americano.  </p>
       </div>
-      <span clase="titulo">Encuentralo en Amazon:</span>
+      <span class="titulo">Encuentralo en Amazon:</span>
       <a
         HREF="https://www.amazon.com/-/es/Isela-Esc%C3%A1rcega-ebook/dp/B08CBRZGC1/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1BCHYUYBKP9OY&keywords=un+amor+que+nunca+llego&qid=1666324280&s=books&sprefix=un+amor+que+nunca+llego%2Cstripbooks%2C134&sr=1-1"><span>Link
           a AMAZON:Un amor que nunca llego</span></a>
