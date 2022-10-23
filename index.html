@@ -46,6 +46,7 @@
 
       body {
         background-color: #000;
+        color: white;
       }
 
       #principal {
@@ -88,6 +89,7 @@
         background-color: #d1c4e9;
         border-top: #6200ea 10px outset;
         border-bottom: #6200ea 10px outset;
+        gap: 2%;
       }
 
       .titulo {
@@ -101,9 +103,9 @@
         width: 20px;
         border: 1px solid var(--A700);
         border-radius: 3px;
-        background-color: var(--A100);
+        background-color:#b388ff;
 
-        color: white;
+        
         text-decoration: none;
         vertical-align: middle;
         text-align: center;
@@ -121,7 +123,6 @@
       }
 
       h1 {
-        color: white;
         text-align: center;
         vertical-align: top;
         letter-spacing: 2px;
@@ -133,9 +134,9 @@
       a {
         box-shadow: 3px 3px 3px #000;
         padding: 10px 10px;
-        border: 1px solid var(--A700);
+        border: 1px solid #6200ea;
         border-radius: 5px;
-        background-color: var(--A100);
+        background-color:  #b388ff;
         color: white;
         text-decoration: none;
         text-align: center;
@@ -143,12 +144,12 @@
       }
 
       #a5 {
-        margin-right: 20px;
+        margin-right: 5px;
       }
 
       .resaltar {
         background-color: white;
-        color: var(--A100);
+        color:  #b388ff;
       }
 
       .aumentar {
@@ -168,12 +169,7 @@
         color: white;
       }
 
-      #pensamientos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1%;
-      }
+     
 
       #texto {
         border-width: 4px;
@@ -183,11 +179,16 @@
       }
 
       .titulo {
-        width: 8%;
-        border-radius: 5px;
+        width: 12%;
+        height: 30px;
+        border-radius: 8px;
         text-align: center;
         vertical-align: middle;
-      }
+       }
+       .titulo:hover{
+        background-color: white;
+        color: #6200ea;
+       }
     </style>
 
     <script src="jquery-3.6.0.js"></script>
@@ -386,7 +387,7 @@
             id="texto"
             title="Texto de poema"
             width="250px"
-            height="300"
+            height="300px"
             aling="center"
             src="pensamientos/saludo.html"
           >

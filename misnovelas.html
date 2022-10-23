@@ -55,12 +55,13 @@
 
     body {
       background-color: #000;
+      color: white;
     }
 
     #pagina {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      
     }
 
     #barraprincipalpoesia {
@@ -72,7 +73,6 @@
     }
 
     h1 {
-      color: white;
       text-align: center;
       vertical-align: middle;
       letter-spacing: 2px;
@@ -106,17 +106,18 @@
     }
 
     #a5 {
-      margin-right: 20px;
+      margin-right: 5px;
     }
 
     #audios {
       display: flex;
       justify-content: center;
+      height: 8px;
     }
-    #audio {
+  /*  #audio {
       margin-top: 2px;
       margin-bottom: 2px;
-    }
+    }*/
 
     #menus {
       display: flex;
@@ -140,10 +141,7 @@
       list-style: none;
     }
 
-    .libros > li {
-      float: left;
-    }
-
+  
     .libros li {
       display: block;
       background-color: #651fff;
@@ -195,8 +193,8 @@
     }
 
     #texto {
-      background-color: #d1c4e9;
-      border-color: #000;
+      background-color: black;
+      border-color: black;
       color: white;
     }
 
@@ -210,7 +208,7 @@
 
     #links a:hover {
       background-color: white;
-      color: var(--A100);
+      color: #b388ff;
     }
   </style>
 
@@ -272,11 +270,11 @@
         <a id="a5" href="misrelatos.html">Mis<br />Relatos</a>
       </div>
       <div id="audios">
-        <audio controls id="audio">
+        <!-- <audio controls id="audio">
           <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
           Tu navegador no admite mp3
-        </audio>
-      </div>
+        </audio> -->
+      </div> 
 
       <div id="menus">
         <ul class="libros">
@@ -300,9 +298,9 @@
             id="texto"
             title="Texto de poema"
             height="600px"
-            width="400px"
-            aling="center"
-            src="imagenes/habiaunavezunalma175.jpg"
+            width="360px"
+            src="imagenes/misnovelas.png"
+                    
           >
           </iframe>
         </div>
