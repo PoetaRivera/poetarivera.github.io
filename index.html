@@ -1,374 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-VE3290LDLF');
-  </script>
-
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poemas</title>
-
-
-  <style>
-    @font-face {
-      font-family: "AlmendraDisplay-Regular";
-      src: url("fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
-    }
-
-    /* Definición variables de color*/
-    :root {
-      --Morado: #EDE7F6;
-    }
-
-    :root {
-      --100: #d1c4e9;
-    }
-
-    :root {
-      --A100: #b388ff;
-    }
-
-    :root {
-      --A700: #6200ea;
-    }
-
-
-
-    body {
-      background-color: #000;
-    }
-
-    #principal {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    #barraprincipal {
-      display: flex;
-      flex-grow: 1;
-      background-image: repeating-radial-gradient(#b388ff, #d1c4e9);
-      justify-content: space-between;
-      height: 150px;
-    }
-
-    #links {
-      display: flex;
-      flex-grow: 0.75;
-      align-items: center;
-      justify-content: flex-end;
-      background-color: #b388ff;
-      margin-top: 10px;
-      gap: 3px;
-      height: 75px;
-    }
-
-    #barratitulo {
-      flex: initial;
-      margin-top: 1px;
-      background-color: black;
-      border-top: black 6px outset;
-      border-bottom: black 3px outset;
-
-    }
-
-    #pensamientos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #d1c4e9;
-      border-top: #6200ea 10px outset;
-      border-bottom: #6200ea 10px outset;
-    }
-
-
-    .titulo {
-      box-shadow: 3px 3px 3px #000;
-      align-items: center;
-      vertical-align: middle;
-      padding-top: 3px;
-      padding-left: 2px;
-      padding-right: 2px;
-      height: 20px;
-      width: 20px;
-      border: 1px solid var(--A700);
-      border-radius: 3px;
-      background-color: var(--A100);
-
-      color: white;
-      text-decoration: none;
-      vertical-align: middle;
-      text-align: center;
-      font-size: large;
-    }
-
-    h2 {
-      color: #6200ea;
-      text-align: center;
-      vertical-align: top;
-      letter-spacing: 2px;
-      word-spacing: 4px;
-      font-family: "AlmendraDisplay-Regular";
-      font-size: 24px;
-    }
-
-    h1 {
-      color: white;
-      text-align: center;
-      vertical-align: top;
-      letter-spacing: 2px;
-      word-spacing: 4px;
-      font-family: "AlmendraDisplay-Regular";
-      font-size: 24px;
-    }
-
-
-    a {
-      box-shadow: 3px 3px 3px #000;
-      padding: 10px 10px;
-      border: 1px solid var(--A700);
-      border-radius: 5px;
-      background-color: var(--A100);
-      color: white;
-      text-decoration: none;
-      text-align: center;
-      font-size: medium;
-    }
-
-    #a5 {
-      margin-right: 20px;
-    }
-
-
-
-    .resaltar {
-      background-color: white;
-      color: var(--A100);
-    }
-
-    .aumentar {
-      width: 300px;
-    }
-
-    .disminuir {
-      width: 50px;
-    }
-
-    #comentarios {
-      background-color: #6200ea;
-      color: white;
-    }
-
-    #formulario {
-      color: white;
-    }
-
-    #pensamientos{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1%;
-    }
-
-    #texto {
-     border-width: 4px;
-     border-color: #6200ea;
-     margin-top: 2px;
-     margin-bottom: 2px;
-    }
-
-   
-    .titulo{
-      width: 8%;
-      border-radius: 5px;
-      text-align: center;
-      vertical-align: middle;
-    }
-
-  
-
-   
-  </style>
-
-
-  <script src="jquery-3.6.0.js"></script>
-  <script>
-    $(document).ready(function () {
-      var enlaces = document.querySelectorAll("a");
-      for (var i = 0; i < enlaces.length; i++) {
-        enlaces[i].addEventListener("mouseover", resaltar);
-        enlaces[i].addEventListener("mouseout", restaurar);
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-      mass.addEventListener("click", cambiar);
-      menoss.addEventListener("click", cambiar);
+      gtag("js", new Date());
 
-    });
+      gtag("config", "G-VE3290LDLF");
+    </script>
 
-    var i = 1;
-    var imagen1 = `<iframe id="texto" title="Texto de poema" height="300px"  width="250px"  aling="center"
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poemas</title>
+
+    <style>
+      @font-face {
+        font-family: "AlmendraDisplay-Regular";
+        src: url("fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
+      }
+
+      /* Definición variables de color*/
+      :root {
+        --Morado: #ede7f6;
+      }
+
+      :root {
+        --100: #d1c4e9;
+      }
+
+      :root {
+        --A100: #b388ff;
+      }
+
+      :root {
+        --A700: #6200ea;
+      }
+
+      body {
+        background-color: #000;
+      }
+
+      #principal {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      #barraprincipal {
+        display: flex;
+        flex-grow: 1;
+        background-image: repeating-radial-gradient(#b388ff, #d1c4e9);
+        justify-content: space-between;
+        height: 150px;
+      }
+
+      #links {
+        display: flex;
+        flex-grow: 0.75;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #b388ff;
+        margin-top: 10px;
+        gap: 3px;
+        height: 75px;
+      }
+
+      #barratitulo {
+        flex: initial;
+        margin-top: 1px;
+        background-color: black;
+        border-top: black 6px outset;
+        border-bottom: black 3px outset;
+      }
+
+      #pensamientos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #d1c4e9;
+        border-top: #6200ea 10px outset;
+        border-bottom: #6200ea 10px outset;
+      }
+
+      .titulo {
+        box-shadow: 3px 3px 3px #000;
+        align-items: center;
+        vertical-align: middle;
+        padding-top: 3px;
+        padding-left: 2px;
+        padding-right: 2px;
+        height: 20px;
+        width: 20px;
+        border: 1px solid var(--A700);
+        border-radius: 3px;
+        background-color: var(--A100);
+
+        color: white;
+        text-decoration: none;
+        vertical-align: middle;
+        text-align: center;
+        font-size: large;
+      }
+
+      h2 {
+        color: #6200ea;
+        text-align: center;
+        vertical-align: top;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+        font-family: "AlmendraDisplay-Regular";
+        font-size: 24px;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        vertical-align: top;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+        font-family: "AlmendraDisplay-Regular";
+        font-size: 24px;
+      }
+
+      a {
+        box-shadow: 3px 3px 3px #000;
+        padding: 10px 10px;
+        border: 1px solid var(--A700);
+        border-radius: 5px;
+        background-color: var(--A100);
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: medium;
+      }
+
+      #a5 {
+        margin-right: 20px;
+      }
+
+      .resaltar {
+        background-color: white;
+        color: var(--A100);
+      }
+
+      .aumentar {
+        width: 300px;
+      }
+
+      .disminuir {
+        width: 50px;
+      }
+
+      #comentarios {
+        background-color: #6200ea;
+        color: white;
+      }
+
+      #formulario {
+        color: white;
+      }
+
+      #pensamientos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1%;
+      }
+
+      #texto {
+        border-width: 4px;
+        border-color: #6200ea;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+
+      .titulo {
+        width: 8%;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    </style>
+
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        var enlaces = document.querySelectorAll("a");
+        for (var i = 0; i < enlaces.length; i++) {
+          enlaces[i].addEventListener("mouseover", resaltar);
+          enlaces[i].addEventListener("mouseout", restaurar);
+        }
+        mass.addEventListener("click", cambiar);
+        menoss.addEventListener("click", cambiar);
+      });
+
+      var i = 1;
+      var imagen1 = `<iframe id="texto" title="Texto de poema" height="300px"  width="250px"  aling="center"
           src="pensamientos/frase1.html">
-        </iframe>`
-    var imagen2 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+        </iframe>`;
+      var imagen2 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
           src="pensamientos/frase2.html">
-        </iframe>`
-    var imagen3 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+        </iframe>`;
+      var imagen3 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
           src="pensamientos/frase3.html">
-        </iframe>`
-    var imagen4 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+        </iframe>`;
+      var imagen4 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
           src="pensamientos/frase4.html">
-        </iframe>`
-    var imagen5 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+        </iframe>`;
+      var imagen5 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
           src="pensamientos/frase5.html">
-        </iframe>`
-    var imagen6 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+        </iframe>`;
+      var imagen6 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
           src="pensamientos/frase6.html">
-        </iframe>`
-    var imagen7 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+        </iframe>`;
+      var imagen7 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
           src="pensamientos/frase7.html">
-        </iframe>`
+        </iframe>`;
+      var imagen8 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+          src="pensamientos/frase8.html">
+        </iframe>`;
+      var imagen9 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+          src="pensamientos/frase9.html">
+        </iframe>`;
+      var imagen10 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+          src="pensamientos/frase10.html">
+        </iframe>`;
+      var imagen11 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+          src="pensamientos/frase11.html">
+        </iframe>`;
+      var imagen12 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
+          src="pensamientos/frase12.html">
+        </iframe>`;
 
-    function cambiar(e) {
-
-      var bandera = false;
-      if (e.target == mass) {
-        if (i == 7) {
-          i = 0;
+      function cambiar(e) {
+        var bandera = false;
+        if (e.target == mass) {
+          if (i == 12) {
+            i = 0;
+          }
+          ++i;
+          var bandera = true;
+        } else if (e.target == menoss) {
+          --i;
+          if (i <= 0) {
+            i = 12;
+          }
+          var bandera = true;
         }
-        ++i;
-        var bandera = true;
-      } else if (e.target == menoss) {
-        --i;
-        if (i <= 0) {
-          i = 7;
+
+        if (bandera == true) {
+          switch (i) {
+            case 1:
+              $("#imagen iframe").replaceWith(imagen1);
+              break;
+            case 2:
+              $("#imagen iframe").replaceWith(imagen2);
+              break;
+            case 3:
+              $("#imagen iframe").replaceWith(imagen3);
+              break;
+            case 4:
+              $("#imagen iframe").replaceWith(imagen4);
+              break;
+            case 5:
+              $("#imagen iframe").replaceWith(imagen5);
+              break;
+            case 6:
+              $("#imagen iframe").replaceWith(imagen6);
+              break;
+            case 7:
+              $("#imagen iframe").replaceWith(imagen7);
+              break;
+            case 8:
+              $("#imagen iframe").replaceWith(imagen8);
+              break;
+            case 9:
+              $("#imagen iframe").replaceWith(imagen9);
+              break;
+            case 10:
+              $("#imagen iframe").replaceWith(imagen10);
+              break;
+            case 11:
+              $("#imagen iframe").replaceWith(imagen11);
+              break;
+            case 12:
+              $("#imagen iframe").replaceWith(imagen12);
+              break;
+          }
         }
-        var bandera = true;
       }
 
-      if (bandera == true) {
-        switch (i) {
-          case 1:
-            $("#imagen iframe").replaceWith(imagen1);
-            break;
-          case 2:
-            $("#imagen iframe").replaceWith(imagen2);
-            break;
-          case 3:
-            $("#imagen iframe").replaceWith(imagen3);
-            break;
-          case 4:
-            $("#imagen iframe").replaceWith(imagen4);
-            break;
-          case 5:
-            $("#imagen iframe").replaceWith(imagen5);
-            break;
-          case 6:
-            $("#imagen iframe").replaceWith(imagen6);
-            break;
-          case 7:
-            $("#imagen iframe").replaceWith(imagen7);
-            break;
-
+      function resaltar(e) {
+        if (e.target == a1) {
+          $("#links #a1").addClass("resaltar");
+        } else if (e.target == a2) {
+          $("#links #a2").addClass("resaltar");
+        } else if (e.target == a3) {
+          $("#links #a3").addClass("resaltar");
+        } else if (e.target == a4) {
+          $("#links #a4").addClass("resaltar");
+        } else if (e.target == a5) {
+          $("#links #a5").addClass("resaltar");
         }
       }
-    }
 
-    function resaltar(e) {
-      if (e.target == a1) {
-        $("#links #a1").addClass("resaltar");
-      } else if (e.target == a2) {
-        $("#links #a2").addClass("resaltar");
-      } else if (e.target == a3) {
-        $("#links #a3").addClass("resaltar");
-      } else if (e.target == a4) {
-        $("#links #a4").addClass("resaltar");
-      } else if (e.target == a5) {
-        $("#links #a5").addClass("resaltar");
+      function restaurar(e) {
+        if (e.target == a1) {
+          $("#links #a1").removeClass("resaltar");
+        } else if (e.target == a2) {
+          $("#links #a2").removeClass("resaltar");
+        } else if (e.target == a3) {
+          $("#links #a3").removeClass("resaltar");
+        } else if (e.target == a4) {
+          $("#links #a4").removeClass("resaltar");
+        } else if (e.target == a5) {
+          $("#links #a5").removeClass("resaltar");
+        }
       }
-    }
+    </script>
+  </head>
 
-    function restaurar(e) {
-      if (e.target == a1) {
-        $("#links #a1").removeClass("resaltar");
-      } else if (e.target == a2) {
-        $("#links #a2").removeClass("resaltar");
-      } else if (e.target == a3) {
-        $("#links #a3").removeClass("resaltar");
-      } else if (e.target == a4) {
-        $("#links #a4").removeClass("resaltar");
-      } else if (e.target == a5) {
-        $("#links #a5").removeClass("resaltar");
-      }
-    }
+  <body>
+    <!--Inicio seccion I codigo de caja comentarios  -->
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0"
+      nonce="CinjQCDE"
+    ></script>
+    <!--Final seccion I codigo de caja comentarios  -->
 
-
-
-  </script>
-</head>
-
-
-
-<body>
-  <!--Inicio seccion I codigo de caja comentarios  -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0"
-    nonce="CinjQCDE"></script>
-  <!--Final seccion I codigo de caja comentarios  -->
-
-  <div id="principal">
-    <div id="barraprincipal">
-      <div>
-        <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
+    <div id="principal">
+      <div id="barraprincipal">
+        <div>
+          <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
+        </div>
+        <div id="titulo">
+          <h1>Poesía de Nelson Rivera</h1>
+        </div>
+        <div>
+          <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
+        </div>
       </div>
-      <div id="titulo">
-        <h1>Poesía de Nelson Rivera</h1>
-      </div>
-      <div>
-        <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
-      </div>
-    </div>
 
-    <div id="links">
-      <a id="a1" href="acercademi.html">Acerca<br> de mí</a>
-      <a id="a2" href="mipoesia.html">Mi<br> poesía </a>
-      <a id="a3" href="misrelatos.html">Mis<br> relatos</a>
-      <a id="a4" href="mislibros.html">Mis<br> libros</a>
-      <a id="a5" href="misnovelas.html">Mis<br> novelas</a>
-    </div>
+      <div id="links">
+        <a id="a1" href="acercademi.html"
+          >Acerca<br />
+          de mí</a
+        >
+        <a id="a2" href="mipoesia.html"
+          >Mi<br />
+          poesía
+        </a>
+        <a id="a3" href="misrelatos.html"
+          >Mis<br />
+          relatos</a
+        >
+        <a id="a4" href="mislibros.html"
+          >Mis<br />
+          libros</a
+        >
+        <a id="a5" href="misnovelas.html"
+          >Mis<br />
+          novelas</a
+        >
+      </div>
 
-    <div id="barratitulo">
-      <h2>Pensamientos</h2>
-    </div>
-    <div id="pensamientos">
-      <div class="titulo" id="mass">Sig</div>
-      <div id="imagen">
-          <iframe id="texto" title="Texto de poema"  width="250px" height="300" aling="center"
-            src="pensamientos/saludo.html">
+      <div id="barratitulo">
+        <h2>Pensamientos</h2>
+      </div>
+      <div id="pensamientos">
+        <div class="titulo" id="mass">Sig</div>
+        <div id="imagen">
+          <iframe
+            id="texto"
+            title="Texto de poema"
+            width="250px"
+            height="300"
+            aling="center"
+            src="pensamientos/saludo.html"
+          >
           </iframe>
+        </div>
+        <div class="titulo" id="menoss">Atr</div>
       </div>
-      <div class="titulo" id="menoss">Atr</div>
     </div>
-  </div>
 
-  <div>
-
-    <!--Inicio seccion II codigo de caja comentarios  -->
-    <div class="fb-comments" data-href="https://poetarivera.github.io/" data-width="100%" data-numposts="5"></div>
-    <!--Final seccion II codigo de caja comentarios  -->
-
-  </div>
- 
-
-
-</body>
-
+    <div>
+      <!--Inicio seccion II codigo de caja comentarios  -->
+      <div
+        class="fb-comments"
+        data-href="https://poetarivera.github.io/"
+        data-width="100%"
+        data-numposts="5"
+      ></div>
+      <!--Final seccion II codigo de caja comentarios  -->
+    </div>
+  </body>
 </html>
