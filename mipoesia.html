@@ -107,11 +107,13 @@
 
   #audios{
     display: flex;
-    justify-content: center;
-  }
+    flex-direction: column;
+    align-items: center;
+   }
   #audio {
     margin-top: 2px;
     margin-bottom: 2px;
+    align-items: center;
   }
 
   #menus {
@@ -203,6 +205,10 @@
     background-color: white;
     color: var(--A100);
   }
+
+  #hayaudio{
+color: yellow;
+  }
 </style>
 
 <script src="jquery-3.6.0.js"></script>
@@ -254,7 +260,9 @@
 
     } else if (e.target == p3) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/quisieraserungranpoeta.html"> </iframe>');
-
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/quisieraserungranpoetaconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
+   
     } else if (e.target == p4) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/eres.html"> </iframe>');
 
@@ -277,6 +285,8 @@
 
     } else if (e.target == p10) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/brisadeoctubre.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/brisadeoctubreconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p11) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/teame1.html"> </iframe>');
@@ -288,6 +298,8 @@
 
     } else if (e.target == p13) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/amandote1.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/amandote1conmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p14) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/amandote2.html"> </iframe>');
@@ -300,10 +312,13 @@
 
     } else if (e.target == p16) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/noterindas.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/noterindasconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p17) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/lafelicidad.html"> </iframe>');
-
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/lafelicidadconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
     } else if (e.target == p18) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/vocesdelalma/elmendigo.html"> </iframe>');
 
@@ -315,15 +330,21 @@
     //libro:El perfume de la espera/sección amor
     else if (e.target == p20) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/amantesenelalmendro.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/amantesenelalmendroconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p21) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/subitosoplo.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/subitosoploconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p22) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/lejania.html"> </iframe>');
 
     } else if (e.target == p23) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/enmiventana.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/enmiventanaconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p24) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/ansiosoespero.html"> </iframe>');
@@ -335,12 +356,16 @@
     //libro:El perfume de la espera/sección Intimidades
     else if (e.target == p26) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/amandose1.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/amandose1conmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p27) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/amandose3.html"> </iframe>');
 
     } else if (e.target == p28) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/ellayel.html"> </iframe>');
+      $("#hayaudio").replaceWith(' <div id="hayaudio">Escuchame</div>')        
+      $("#audio").replaceWith('<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/ellayelconmusica.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>')
 
     } else if (e.target == p29) {
       $("#texto").replaceWith('<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="poemas/elperfumedelaespera/sombrafurtiva.html"> </iframe>');
@@ -465,8 +490,9 @@
       <a id="a5" href="misnovelas.html">Mis<br>novelas</a>
     </div>
     <div id="audios">
-      <audio controls id="audio">
-        <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
+      <div id="hayaudio"></div>
+      <audio controls  id="audio">
+        <source  src="audios/y fueron primavera.mp3" type="audio/mpeg"  />
         Tu navegador no admite mp3
       </audio>
     </div>
