@@ -1,18 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <!-- Google tag (gtag.js) google analitica -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-VE3290LDLF');
+</script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <style>
-    body {
+  
+
+    @font-face {
+        font-family: "AlmendraDisplay-Regular";
+        src: url("fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
+      }
+
+      /* Definición variables de color*/
+      :root {
+        --Morado: #ede7f6;
+      }
+
+      :root {
+        --100: #d1c4e9;
+      }
+
+      :root {
+        --A100: #b388ff;
+      }
+
+      :root {
+        --A700: #6200ea;
+      }
+
+      body {
+        background-color: #000;
+        color: white;
+      }
+
+      body {
       background-color: black;
       color: white;
     }
 
-    img {
+     
+  #contenedor {
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+  }
+
+  #barraprincipal {
+    display: flex;
+    flex-grow: 1;
+    background-image: repeating-radial-gradient(#6200ea, #d1c4e9);
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-family: "AlmendraDisplay-Regular";
+    font-size: 24px;
+  }
+
+  #links {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.75;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #d1c4e9;
+    margin-top: 10px;
+    gap: 3px;
+    height: 75px;
+  }
+
+  #links a {
+    box-shadow: 3px 3px 3px #000;
+    padding: 10px 10px;
+    border: 1px solid var(--A700);
+    border-radius: 5px;
+    background-color: #b388ff;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: medium;
+  }
+
+  #a5 {
+    margin-right: 5px;
+  }
+
+ 
+
+   #links a:hover {
+    background-color: white;
+    color: var(--A100);
+  }
+
+
+    #contenedor2{
+      display: flex;
+    }
+
+    img3 {
       float: left;
       opacity: 1;
       border-style: solid;
@@ -25,11 +129,48 @@
       margin-left: 12px;
       font-size: 10px;
     }
+   
   </style>
 
   <body>
     <div id="contenedor">
-      <img src="imagenes/mifoto.jpg" alt="Yo" width="200" height="267" />
+      <div id="barraprincipal">
+        <div>
+          <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
+        </div>
+        <div id="titulo">
+          <h1>Poesía de Nelson Rivera</h1>
+        </div>
+        <div>
+          <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
+        </div>
+      </div>
+
+      <div id="links">
+        <a id="a1" href="index.html"
+          >El<br />
+          inicio</a
+        >
+        <a id="a2" href="mipoesia.html"
+          >Mi<br />
+          poesía
+        </a>
+        <a id="a3" href="misrelatos.html"
+          >Mis<br />
+          relatos</a
+        >
+        <a id="a4" href="mislibros.html"
+          >Mis<br />
+          libros</a
+        >
+        <a id="a5" href="misnovelas.html"
+          >Mis<br />
+          novelas</a
+        >
+      </div>
+
+<div  id=contenedor2>
+      <img id=img3 src="imagenes/mifoto.jpg" alt="Yo" width="200" height="267" />
 
       <div id="texto">
         <p>
@@ -53,6 +194,7 @@
           de novelas. Sin duda, escribir y programar son dos cosas que disfruto
           hacer. Y doy gracias por haber tenido la oportunidad de lograrlo.
         </p>
+      </div>
       </div>
     </div>
   </body>
