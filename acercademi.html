@@ -1,135 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- Google tag (gtag.js) google analitica -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-VE3290LDLF');
-</script>
+      gtag("config", "G-VE3290LDLF");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <style>
-  
-
     @font-face {
-        font-family: "AlmendraDisplay-Regular";
-        src: url("fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
-      }
+      font-family: "AlmendraDisplay-Regular";
+      src: url("fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
+    }
 
-      /* Definición variables de color*/
-      :root {
-        --Morado: #ede7f6;
-      }
+    /* Definición variables de color*/
+    :root {
+      --Morado: #ede7f6;
+    }
 
-      :root {
-        --100: #d1c4e9;
-      }
+    :root {
+      --100: #d1c4e9;
+    }
 
-      :root {
-        --A100: #b388ff;
-      }
+    :root {
+      --A100: #b388ff;
+    }
 
-      :root {
-        --A700: #6200ea;
-      }
+    :root {
+      --A700: #6200ea;
+    }
 
-      body {
-        background-color: #000;
-        color: white;
-      }
+    body {
+      background-color: #000;
+      color: white;
+    }
 
-      body {
+    body {
       background-color: black;
       color: white;
     }
 
-     
-  #contenedor {
-    display: flex;
-    flex-direction: column;
-    gap:3px;
-  }
-
-  #barraprincipal {
-    display: flex;
-    flex-grow: 1;
-    background-image: repeating-radial-gradient(#6200ea, #d1c4e9);
-    justify-content: space-between;
-    height: 150px;
-  }
-
-  h1 {
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    letter-spacing: 2px;
-    word-spacing: 4px;
-    font-family: "AlmendraDisplay-Regular";
-    font-size: 24px;
-  }
-
-  #links {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 0.75;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: #d1c4e9;
-    margin-top: 10px;
-    gap: 3px;
-    height: 75px;
-  }
-
-  #links a {
-    box-shadow: 3px 3px 3px #000;
-    padding: 10px 10px;
-    border: 1px solid var(--A700);
-    border-radius: 5px;
-    background-color: #b388ff;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: medium;
-  }
-
-  #a5 {
-    margin-right: 5px;
-  }
-
- 
-
-   #links a:hover {
-    background-color: white;
-    color: var(--A100);
-  }
-
-
-    #contenedor2{
+    #contenedor {
       display: flex;
+      flex-direction: column;
+      gap: 3px;
     }
 
-    img3 {
+    #barraprincipal {
+      display: flex;
+      flex-grow: 1;
+      background-image: repeating-radial-gradient(#6200ea, #d1c4e9);
+      justify-content: space-between;
+      height: 150px;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      letter-spacing: 2px;
+      word-spacing: 4px;
+      font-family: "AlmendraDisplay-Regular";
+      font-size: 24px;
+    }
+
+    #links {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 0.75;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: #d1c4e9;
+      margin-top: 10px;
+      gap: 3px;
+      height: 75px;
+    }
+
+    #links a {
+      box-shadow: 3px 3px 3px #000;
+      padding: 10px 10px;
+      border: 1px solid var(--A700);
+      border-radius: 5px;
+      background-color: #b388ff;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-size: medium;
+    }
+
+    #a5 {
+      margin-right: 5px;
+    }
+
+    #links a:hover {
+      background-color: white;
+      color: var(--A100);
+    }
+
+    #contenedor2 {
+      text-align: justify;
+      margin-top: 8px;
+      font-size: 10px;
+    }
+
+    #img3 {
       float: left;
       opacity: 1;
       border-style: solid;
-      border-width: 10px;
+      border-width: 8px;
       border-color: black;
+      border-top: 0px;
+      border-bottom: 4px;
     }
-
-    p {
-      text-align: justify;
-      margin-left: 12px;
-      font-size: 10px;
-    }
-   
   </style>
 
   <body>
@@ -169,32 +164,33 @@
         >
       </div>
 
-<div  id=contenedor2>
-      <img id=img3 src="imagenes/mifoto.jpg" alt="Yo" width="200" height="267" />
+      <div id="contenedor2">
+        <img
+          id="img3"
+          src="imagenes/mifoto.jpg"
+          alt="Yo"
+          width="200"
+          height="267"
+        />
 
-      <div id="texto">
-        <p>
-          Mi nombre es Nelson René Rivera Vides, de nacionalidad
-          centroamericana, nacido específicamente en El Salvador en el año de
-          1959. Descubrí hace unos cuantos años, específicamente en el año 2014
-          que me gustaba escribir. En esa época comencé a hacer mis primeros
-          escritos, en ese momento no contaba con una buena formación en el
-          ámbito de la ortografía y de la gramática de nuestro lenguaje, muchos
-          menos en el área literaria. Mas sin embargo, como decimos por aquí,
-          “me tiré al pozo”; como hacemos casi todos los que comenzamos nuestra
-          aventura literaria en el ciberespacio. Y comencé a publicar mis
-          primeros escritos, a los cuales yo llamaba poemas, en una de las redes
-          sociales.<br /><br />
-          Luego de un tiempo, me di cuenta de la necesidad de mejorar mis
-          conocimientos en todo lo referente al lenguaje: gramática, ortografía,
-          redacción, poesía, etc. Y comencé a estudiar de manera autodidacta y
-          hasta la fecha continúo haciéndolo. Como pueden darse cuenta en esta
-          página he intentado escribir poesía tanto en prosa como en verso, he
-          incursionado el mundo de los relatos y me aventuré a escribir un par
-          de novelas. Sin duda, escribir y programar son dos cosas que disfruto
-          hacer. Y doy gracias por haber tenido la oportunidad de lograrlo.
-        </p>
-      </div>
+        Mi nombre es Nelson René Rivera Vides, de nacionalidad centroamericana,
+        nacido específicamente en El Salvador en el año de 1959. Descubrí hace
+        unos cuantos años, específicamente en el año 2014 que me gustaba
+        escribir. En esa época comencé a hacer mis primeros escritos, en ese
+        momento no contaba con una buena formación en el ámbito de la ortografía
+        y de la gramática de nuestro lenguaje, muchos menos en el área
+        literaria. Mas sin embargo, como decimos por aquí, “me tiré al pozo”;
+        como hacemos casi todos los que comenzamos nuestra aventura literaria en
+        el ciberespacio. Y comencé a publicar mis primeros escritos, a los
+        cuales yo llamaba poemas, en una de las redes sociales.<br /><br />
+        Luego de un tiempo, me di cuenta de la necesidad de mejorar mis
+        conocimientos en todo lo referente al lenguaje: gramática, ortografía,
+        redacción, poesía, etc. Y comencé a estudiar de manera autodidacta y
+        hasta la fecha continúo haciéndolo. Como pueden darse cuenta en esta
+        página he intentado escribir poesía tanto en prosa como en verso, he
+        incursionado el mundo de los relatos y me aventuré a escribir un par de
+        novelas. Sin duda, escribir y programar son dos cosas que disfruto
+        hacer. Y doy gracias por haber tenido la oportunidad de lograrlo.
       </div>
     </div>
   </body>
