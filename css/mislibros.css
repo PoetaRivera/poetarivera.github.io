@@ -1,0 +1,99 @@
+:root {
+  --Morado: rgb(237, 231, 246, 1);
+  --100: rgb(209, 196, 233, 1);
+  --A100: rgb(179, 136, 255, 1);
+  --A200: #7c4dff;
+  --A400: #651fff;
+  --A700: rgb(98, 0, 234, 1);
+}
+
+#pagina {
+  align-items: center;
+}
+
+#barraprincipal {
+  width: 100%;
+}
+
+
+#contenedor-libros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  max-width: 60%;
+}
+
+.contenedor-un-libro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-texto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+ 
+}
+
+hr {
+  border-right: 3px;
+  border-style: groove;
+  border-color: var(--A700);
+  width: 100%;
+}
+
+p {
+  color: white;
+  text-align: justify;
+}
+
+h2{
+  color: #6200ea;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+  color: #6200ea;
+  font-weight: bold;
+  text-align: center;
+}
+
+h4 {
+  color: yellow;
+}
+
+/*------------------------------------------------*/
+/*Queries*/
+@media (min-width : 769px) {
+  #contenedor-libros {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-self: stretch;
+      max-width:100%;
+    }
+
+        .contenedor-un-libro {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 40%;
+        }
+}
+
+

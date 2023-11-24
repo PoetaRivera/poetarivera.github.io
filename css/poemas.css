@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family:"Caladea-Regular", sans-serif;
+    font-size: 0.7rem;
+        color: white;
+}
+
+/* #inicial{
+    text-align: justify;
+    font-size: 11pt;
+    font-style: italic;
+  } */
+
+div > p {
+    margin: 0pt;
+    line-height: 1.5;
+ }
+
+h2 {
+    margin-bottom: 0pt;
+    text-align: center;
+    line-height: normal;
+    font-family: "Caladea-Regular", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    color:white;
+    
+}
+
+#minombre{
+font-size:1rem;
+font-family:'Caladea-Italic',sans-serif; 
+color:#1d2129;
+
+}

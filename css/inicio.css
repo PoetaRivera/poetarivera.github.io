@@ -1,0 +1,352 @@
+:root {
+  --Morado: rgb(237, 231, 246, 1);
+  --100: rgb(209, 196, 233, 1);
+  --A100: rgb(179, 136, 255, 1);
+  --A200: #7c4dff;
+  --A400: #651fff;
+  --A700: rgb(98, 0, 234, 1);
+}
+
+/*Seccion Encabezado*/
+#barratitulo {
+  /*Contenedor-Header */
+  display: flex;
+  flex: 1, 1, auto;
+  background-color: black;
+  border-top: black 6px outset;
+  border-bottom: black 3px outset;
+}
+
+
+
+/*Seccion Pensamientos
+Contenedor pensamientos y botones */
+#pensamientos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin-bottom: 1%;
+  gap: 2%;
+  border: none;
+}
+
+/* contenedor Botones */
+.pensamientos-contenedor-botones {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  width: 50%;
+}
+
+/* Contenedor Flechas */
+.pensamientos-boton {
+  box-shadow: 3px 3px 3px #000;
+  padding-top: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 10px;
+  max-height: 25px;
+  max-width: 50px;
+  border: 1px solid var(--A700);
+  border-radius: 8px;
+  background-color: var(--100);
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  height: 15px;
+  transition-duration: 1s;
+}
+
+/* Imagen-Flechas */
+.flecha {
+  width: 25px;
+}
+
+.pensamientos-boton:hover {
+  scale: 1.5;
+  cursor: pointer;
+}
+
+/* Contenedor parrafo-Pensamientos e Imgen-Separador */
+.pensamientos-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  width: 80vw;
+  flex-grow: 1;
+  margin-top: 0%;
+  border: none;
+}
+
+/* Imagen-Separador */
+.pensamientos-texto img {
+  max-width: 150px;
+
+}
+
+/* Parrafo-Pensamientos */
+.pensamientos-texto p {
+  font-size: 1.1rem;
+  font-family: "AlmendraDisplay-Regular";
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+/*Seccion Funciones */
+
+.resaltar {
+  background-color: white;
+  color: #b388ff;
+}
+
+.aumentar {
+  width: 300px;
+}
+
+.disminuir {
+  width: 50px;
+}
+
+/*Redes Sociales*/
+.contenedor-redes {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 10px;
+  min-height: 50px;
+}
+
+.facebook,
+.youtube {
+  max-height: 42px;
+}
+
+/*Seccion Comentarios*/
+.contenedor-caja-comentarios {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  gap: 5px;
+  padding: 10px;
+  align-self: center;
+  min-width: 99%;
+}
+
+.formulario-caja-comentarios {
+  max-width: 100%;
+
+}
+
+.contenedor-mensaje {
+  display: flex;
+  flex-direction: column;
+  color: var(--A200);
+
+}
+
+.contenedor-mensaje p {
+  min-height: 50px;
+  background-color: #000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-small;
+  text-align: center;
+  border-width: 1px;
+  border-style: double;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+
+.formulario-caja-comentarios ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px
+}
+
+.comentarios-subtitulo {
+  background-color: #000;
+}
+
+.comentarios-entrada-datos {
+  display: flex;
+  flex-direction: column;
+}
+
+.comentarios-etiquetas {
+  color: black;
+}
+
+.comentarios-datos {
+  background-color: #000;
+  border-width: 1px;
+  border-style: inset;
+  border-color: var(--A400);
+  color: white;
+  height: 20px;
+
+}
+
+#comentario {
+  height: 80px;
+  border-style: inset;
+  border-color: var(--A400);
+}
+
+.comentarios-contenedor-boton {
+  align-self: center;
+
+}
+
+/*Todos los botones en el area de comentarios*/
+.comentarios-boton {
+  box-shadow: 5px 5px 5px var(--A100);
+  padding: 3px 3px;
+  border-style: inset;
+  border: 2px solid var(--A700);
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 1%;
+  width: 80px;
+  transition-duration: 1s;
+}
+
+.comentarios-boton:hover {
+
+  color: var(--A700);
+  box-shadow: 5px 5px 5px var(--A700);
+  border: 2px solid var(--A100);
+  scale: 1.5;
+}
+
+.contenedor-mostraryborrar-comentarios {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  border: none;
+  gap: 5px;
+  padding: 10px;
+  align-self: center;
+  min-width: 99%;
+
+}
+
+/*Boton guardar comentarios*/
+.ver-comentarios-boton {
+  align-self: center;
+}
+
+.ver-comentarios {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px;
+  margin-bottom: 50px;
+
+}
+
+.p-nombre {
+  margin-bottom: 3px;
+}
+
+.textarea-comentarios {
+  margin-bottom: 10px;
+  background-color: #000;
+  color: var(--A700);
+  min-width: 200px;
+  height: 50px;
+
+}
+
+/* Todos los subtitulos*/
+h3 {
+  color: var(--A700);
+  text-align: center;
+  vertical-align: top;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-family: "Caladea-Regular";
+}
+
+
+/*------------------------------------------------*/
+/*Queries*/
+@media (min-width : 250px) {
+  h3 {
+    font-size: 1.2rem;
+  }
+  .pensamientos-boton{
+    height:15px;
+  }
+
+  .flecha{
+    width: 25px;
+  }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 481px) {
+h3 {
+    font-size: 1.2rem;
+  }
+
+  .pensamientos-boton {
+    height: 15px;
+  }
+
+  .flecha {
+    width: 25px;
+  }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 769px) {
+  h3 {
+      font-size: 1.3rem;
+    }
+  
+    .pensamientos-boton {
+      height: 20px;
+    }
+  
+    .flecha {
+      width: 30px;
+    }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 1025px) {
+  h3 {
+      font-size: 1.4rem;
+    }
+  
+    .pensamientos-boton {
+      height: 25px;
+    }
+  
+    .flecha {
+      width: 35px;
+    }
+}

@@ -7,26 +7,11 @@
 /* Definición variables de color*/
 :root {
     --Morado: #ede7f6;
-  }
-
-  :root {
-    --100: #d1c4e9;
-  }
-
-  :root {
-    --A100: #b388ff;
-  }
-
-  :root {
-    --A200: #7C4DFF;
-  }
-
-  :root {
+      --100: #d1c4e9;
+      --A100: #b388ff;
+      --A200: #7C4DFF;
     --A400: #651FFF;
-  }
-
-  :root {
-    --A700: #6200ea;
+     --A700: #6200ea;
   }
 
   body {

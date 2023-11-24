@@ -1,0 +1,120 @@
+:root {
+  --Morado: #ede7f6;
+  --100: #d1c4e9;
+  --A100: #b388ff;
+  --A200: #7c4dff;
+  --A400: #651fff;
+  --A700: #6200ea;
+}
+
+/* Seccion Player */
+#audios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#audio {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+  opacity: 0.8;
+  transform: scale(0.7);
+}
+
+#hayaudio {
+  color: var(--A700);
+}
+
+/*Seccion menus */
+/*Voces del alma, poemas con audio*/
+#p3, #p10, #p13, #p16, #p17{
+  color:gold;
+}
+
+/*El perfume de la espera, poemas con audio*/
+#p20, #p21, #p23, #p26, #p28{
+color: gold;
+}
+
+
+/* Seccion Poemas*/
+#titulopoema {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+h2 {
+  color: var(--A700);
+  text-align: center;
+  vertical-align: top;
+  letter-spacing: 2px;
+  font-family: "Caladea-Regular", sans-serif;
+  font-size: 0.9rem;
+}
+
+#modulo1 {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 6;
+  justify-content: center;
+  align-items: center;
+  background-color:black;
+  border:none;
+  padding-top: 10px;
+}
+
+
+#texto {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  background-color:black;
+  border: 3px;
+  border-color: var(--A700);
+  max-width: 300px;
+  min-height: 570px; 
+  justify-content: center;
+  border-style: inset;
+  padding: 5px;
+  
+  
+}
+
+/*------------------------------------------------*/
+/*Queries*/
+@media (min-width : 250px) {
+  h2 {
+    font-size: 1.0rem;
+  }
+ 
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 481px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 769px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+
+
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 1025px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+
+}
+
+

@@ -1,367 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) Estadidticas google -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"
-    ></script>
+
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Principal</title>
+
+
+  <link rel="stylesheet" href="./css/paginas.css">
+  <link rel="stylesheet" href="./css/inicio.css">
+  <script src="./js/jquery-3.6.0.js"></script>
+
+
+</head>
+
+<body>
+
+
+  <div id="pagina">
+
+    <!-- Encabezado -->
+    <header id="barraprincipal">
+      <div id="foto2">
+        <img class="miFoto" src="imagenes/foto4.png" alt="" />
+      </div>
+      <div id="titulo">
+        <h1 class="animacion-titulo">Poesía de <br> Nelson Rivera</h1>
+      </div>
+      <div id="foto1">
+        <img class="miFoto" src="imagenes/foto3.png" alt="" />
+      </div>
+    </header>
+
+
+    <!-- Seccion Menu -->
+    <section id="links">
+      <a class="misLinks" id="a1" href="acercademi.html">Acerca<br />
+        de mí</a>
+      <a class="misLinks" id="a2" href="mipoesia.html">Mi<br />
+        poesía
+      </a>
+      <a class="misLinks" id="a3" href="misrelatos.html">Mis<br />
+        relatos</a>
+      <a class="misLinks" id="a4" href="mislibros.html">Mis<br />
+        libros</a>
+      <a class="misLinks" id="a5" href="misnovelas.html">Mis<br />
+        novelas</a>
+    </section>
+
+
+    <!-- Sección pensamientos -->
+    <h3>Pensamientos</h3>
+
+    <section id="pensamientos">
+      <div class="pensamientos-contenedor-botones">
+        <div class="pensamientos-boton" id="menoss" readonly><img class="flecha" id="imgMenos" title="Anterior"
+            alt="flecha-izq" src="./imagenes/miflechaizqnegro.png"></img></div>
+        <div class="pensamientos-boton" id="mass" readonly><img class="flecha" id="imgMas" title="Siguiente"
+            alt="flecha-der" src="./imagenes/miflechadernegro.png"></img></div>
+      </div>
+      <div class="pensamientos-texto">
+        <p id="texto"> Bienvenidos,<br>
+          me hace muy feliz<br>
+          vuestra presencia <br>
+          en esta tu página.<br><br>
+          Deseo disfruten <br>
+          de esta muestra <br>
+          de mi obra literaria.<br></p>
+        <img class='pensamientos-borde' src="./imagenes/borde.png" alt="borde"></img>
+      </div>
+    </section>
     
-    <!-- Caja de comentarios-->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    <!-- Seccion Redes sociales -->
+    <section class="contenedor-redes">
+     <h3>Mis Redes Sociales</h3> 
+<div class="redes">
+<img class="youtube" id="youtube" class="miYoutube" src="imagenes/youtube32.png" alt="" />
+<img class="facebook" id="facebook" class="miFacebook" src="imagenes/facebook32.png" alt="" />
+</div>
+    </section>
 
-      gtag("config", "G-VE3290LDLF");
-    </script>
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="paginas.css">
-    <style>
 
-    
+    <!-- Seccion Caja de Comentarios -->
+    <h3 class="comentarios-subtitulo">Deja tu comentario</h3>
+    <aside role="alert" class="contenedor-mensaje" id="contenedor-mensaje">
+      <p id="mensaje">Para dejar un comentario, debes darte un nombre(una sola palabra), tu país de residencia y una
+        contraseña.</p>
+    </aside>
+    <section class="contenedor-caja-comentarios">
 
-     
-     
+      <form class="formulario-caja-comentarios" id="formulario" data-formulario>
+        <ul>
+          <li class="comentarios-entrada-datos">
+            <label class="comentarios-etiquetas" for="nombre">Nombre:</label>
+            <input class="comentarios-datos" type="text" autocomplete="off" id="nombre" name="nombre" required
+              placeholder="Escribe tu nombre" />
+          </li>
 
-      #barratitulo {
-        flex: initial;
-        margin-top: 1px;
-        background-color: black;
-        border-top: black 6px outset;
-        border-bottom: black 3px outset;
-      }
+          <li class="comentarios-entrada-datos">
+            <label class="comentarios-etiquetas" for="pais">País:</label>
+            <input class="comentarios-datos" type="text" autocomplete="off"  id="pais"  name="pais" required placeholder="Escribe tu país" />
+          </li>
 
-      #pensamientos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #d1c4e9;
-        border-top: #6200ea 10px outset;
-        border-bottom: #6200ea 10px outset;
-        gap: 2%;
-      }
+          <li class="comentarios-entrada-datos">
+            <label class="comentarios-etiquetas" for="password">Contraseña:</label>
+            <input class="comentarios-datos" type="password" autocomplete="off" id="password" name="password" required
+              placeholder="Escribe tu contraseña" />
+          </li>
 
-      .titulo {
-        box-shadow: 3px 3px 3px #000;
-        align-items: center;
-        vertical-align: middle;
-        padding-top: 3px;
-        padding-left: 2px;
-        padding-right: 2px;
-        height: 20px;
-        width: 20px;
-        border: 1px solid var(--A700);
-        border-radius: 3px;
-        background-color: #b388ff;
+          <li class="comentarios-entrada-datos">
+            <label class="comentarios-etiquetas" for="comentario">Comentario:</label>
+            <textarea class="comentarios-datos" id="comentario" name="comentario" required
+              placeholder="Deja tu comentario"></textarea>
+          </li>
 
-        text-decoration: none;
-        vertical-align: middle;
-        text-align: center;
-        font-size: large;
-      }
+          <li class="comentarios-contenedor-boton">
+            <button class="comentarios-boton" id="btnGuardar" type="submit">Guardar
+              comentario</button>
+          </li>
 
-      h2 {
-        color: #6200ea;
-        text-align: center;
-        vertical-align: top;
-        letter-spacing: 2px;
-        word-spacing: 4px;
-        font-family: "AlmendraDisplay-Regular";
-        font-size: 24px;
-      }
+        </ul>
+      </form>
+    </section>
 
-   
 
-      a {
-        box-shadow: 3px 3px 3px #000;
-        padding: 10px 10px;
-        border: 1px solid #6200ea;
-        border-radius: 5px;
-        background-color: #b388ff;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        font-size: medium;
-      }
+    <Section class="contenedor-mostraryborrar-comentarios">
+      <!-- Seccion VER comentarios -->
+      <button class="comentarios-boton" id="btnMostrar" class="ver-comentarios-boton" type="button">Mostrar
+        comentarios</button>
 
-    
+      <!-- Seccion OCULTAR comentarios -->
+      <button class="comentarios-boton" id="btnOcultar" class="ver-comentarios-boton" type="button">Ocultar
+        comentarios</button>
+     </Section>
 
-      .resaltar {
-        background-color: white;
-        color: #b388ff;
-      }
+    <!-- Aquí aparacerán los comentarios -->
+    <div class="ver-comentarios" id="comentarios" data-table> </div>
 
-      .aumentar {
-        width: 300px;
-      }
 
-      .disminuir {
-        width: 50px;
-      }
 
-      #comentarios {
-        background-color: #6200ea;
-        color: white;
-      }
 
-      #formulario {
-        color: white;
-      }
+  </div>
+  <script src="./js/inicio.js"></script>
+  <script src="./js/servicio-Crud.js" type="module"></script>
+</body>
 
-      #texto {
-        border-width: 4px;
-        border-color: #6200ea;
-        margin-top: 2px;
-        margin-bottom: 2px;
-      }
-
-      .titulo {
-        width: 12%;
-        height: 30px;
-        border-radius: 8px;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .titulo:hover {
-        background-color: white;
-        color: #6200ea;
-      }
-
-      #redes{
-      display: flex;
-      flex-direction: row;
-      height: auto;
-      margin: 8ptx;
-      }
-    </style>
-
-    <script src="jquery-3.6.0.js"></script>
-    <script>
-      $(document).ready(function () {
-        var enlaces = document.querySelectorAll("a");
-        for (var i = 0; i < enlaces.length; i++) {
-          enlaces[i].addEventListener("mouseover", resaltar);
-          enlaces[i].addEventListener("mouseout", restaurar);
-        }
-        mass.addEventListener("click", cambiar);
-        menoss.addEventListener("click", cambiar);
-      });
-
-      var i = 1;
-      var imagen1 = `<iframe id="texto" title="Texto de poema" height="300px"  width="250px"  aling="center"
-          src="pensamientos/frase1.html">
-        </iframe>`;
-      var imagen2 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase2.html">
-        </iframe>`;
-      var imagen3 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase3.html">
-        </iframe>`;
-      var imagen4 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase4.html">
-        </iframe>`;
-      var imagen5 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase5.html">
-        </iframe>`;
-      var imagen6 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase6.html">
-        </iframe>`;
-      var imagen7 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase7.html">
-        </iframe>`;
-      var imagen8 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase8.html">
-        </iframe>`;
-      var imagen9 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase9.html">
-        </iframe>`;
-      var imagen10 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase10.html">
-        </iframe>`;
-      var imagen11 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase11.html">
-        </iframe>`;
-      var imagen12 = `<iframe id="texto" title="Texto de poema" height="300px" width="250px" aling="center"
-          src="pensamientos/frase12.html">
-        </iframe>`;
-
-      function cambiar(e) {
-        var bandera = false;
-        if (e.target == mass) {
-          if (i == 12) {
-            i = 0;
-          }
-          ++i;
-          var bandera = true;
-        } else if (e.target == menoss) {
-          --i;
-          if (i <= 0) {
-            i = 12;
-          }
-          var bandera = true;
-        }
-
-        if (bandera == true) {
-          switch (i) {
-            case 1:
-              $("#imagen iframe").replaceWith(imagen1);
-              break;
-            case 2:
-              $("#imagen iframe").replaceWith(imagen2);
-              break;
-            case 3:
-              $("#imagen iframe").replaceWith(imagen3);
-              break;
-            case 4:
-              $("#imagen iframe").replaceWith(imagen4);
-              break;
-            case 5:
-              $("#imagen iframe").replaceWith(imagen5);
-              break;
-            case 6:
-              $("#imagen iframe").replaceWith(imagen6);
-              break;
-            case 7:
-              $("#imagen iframe").replaceWith(imagen7);
-              break;
-            case 8:
-              $("#imagen iframe").replaceWith(imagen8);
-              break;
-            case 9:
-              $("#imagen iframe").replaceWith(imagen9);
-              break;
-            case 10:
-              $("#imagen iframe").replaceWith(imagen10);
-              break;
-            case 11:
-              $("#imagen iframe").replaceWith(imagen11);
-              break;
-            case 12:
-              $("#imagen iframe").replaceWith(imagen12);
-              break;
-          }
-        }
-      }
-
-      function resaltar(e) {
-        if (e.target == a1) {
-          $("#links #a1").addClass("resaltar");
-        } else if (e.target == a2) {
-          $("#links #a2").addClass("resaltar");
-        } else if (e.target == a3) {
-          $("#links #a3").addClass("resaltar");
-        } else if (e.target == a4) {
-          $("#links #a4").addClass("resaltar");
-        } else if (e.target == a5) {
-          $("#links #a5").addClass("resaltar");
-        }
-      }
-
-      function restaurar(e) {
-        if (e.target == a1) {
-          $("#links #a1").removeClass("resaltar");
-        } else if (e.target == a2) {
-          $("#links #a2").removeClass("resaltar");
-        } else if (e.target == a3) {
-          $("#links #a3").removeClass("resaltar");
-        } else if (e.target == a4) {
-          $("#links #a4").removeClass("resaltar");
-        } else if (e.target == a5) {
-          $("#links #a5").removeClass("resaltar");
-        }
-      }
-    </script>
-  </head>
-
-  <body>
-    <!--Inicio seccion I codigo de caja comentarios  -->
-    <div id="fb-root"></div>
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0"
-      nonce="CinjQCDE"
-    ></script>
-    <!--Final seccion I codigo de caja comentarios  -->
-
-    <div id="principal">
-      <div id="barraprincipal">
-        <div>
-          <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
-        </div>
-        <div id="titulo">
-          <h1>Poesía de Nelson Rivera</h1>
-        </div>
-        <div>
-          <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
-        </div>
-      </div>
-
-      <div id="links">
-        <a id="a1" href="acercademi.html"
-          >Acerca<br />
-          de mí</a
-        >
-        <a id="a2" href="mipoesia.html"
-          >Mi<br />
-          poesía
-        </a>
-        <a id="a3" href="misrelatos.html"
-          >Mis<br />
-          relatos</a
-        >
-        <a id="a4" href="mislibros.html"
-          >Mis<br />
-          libros</a
-        >
-        <a id="a5" href="misnovelas.html"
-          >Mis<br />
-          novelas</a
-        >
-      </div>
-
-      <div id="barratitulo">
-        <h2>Pensamientos</h2>
-      </div>
-      <div id="pensamientos">
-        <div class="titulo" id="mass">Sig</div>
-        <div id="imagen">
-          <iframe
-            id="texto"
-            title="Texto de poema"
-            width="250px"
-            height="300px"
-            aling="center"
-            src="pensamientos/saludo.html"
-          >
-          </iframe>
-        </div>
-        <div class="titulo" id="menoss">Atr</div>
-      </div>
-
-      <div id="redes">
-        <a title="facebook iconos"href="https://www.flaticon.es/iconos-gratis/facebook">Facebook iconos creados por Pixel perfect - Flaticon</a>
-        <a title="facebook" href="https://www.facebook.com/nelson.rivera.98"><img src="imagenes/facebook32.png"  withd=32px alt="facebook" /></a>
-        <a title="youtube" href="https://www.youtube.com/channel/UCqoTEbXwDBR8CxZm4JFHJpA/videos"><img src="imagenes/youtube32.png"  withd=32px alt="youtuube" /></a>
-      </div>
-  
-      
-        <!--Inicio seccion II codigo de caja comentarios  -->
-        <div
-          class="fb-comments"  data-href="https://poetarivera.github.io/"  data-width="100%"  data-numposts="5">
-        </div>
-        <!--Final seccion II codigo de caja comentarios  -->
-    </div>
-
-  
-    
-  </body>
 </html>

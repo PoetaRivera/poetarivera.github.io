@@ -1,0 +1,67 @@
+  div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #contenedor2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-top: 8px;
+    font-size: 0.625rem;
+    color: var(--100);
+margin-left: 10%;
+margin-right: 10%;
+    
+  }
+
+  #miparrafo {
+    letter-spacing: 0.06rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+  }
+
+
+  #img3 {
+    opacity: 1;
+    border-style: inset;
+    border-width: 2px;
+    border-color: var(--A700);
+    align-self: center;
+    margin-bottom: 15px;
+    transition-duration: 1.5s;
+  }
+
+  #img3:hover {
+    opacity: 0.6;
+    scale: 2.0;
+  }
+
+  /*------------------------------------------------*/
+  /*Queries*/
+  @media (min-width : 250px) {
+    #contenedor2 {
+      font-size: 0.625rem;
+    }
+  }
+
+  /*-------------------------------------------------------*/
+  @media (min-width : 481px) {
+    #contenedor2 {
+      font-size: 0.8rem;
+    }
+  }
+
+  /*-------------------------------------------------------*/
+  @media (min-width : 769px) {
+    #contenedor2 {
+      font-size: 0.9rem;
+    }
+  }
+
+  /*-------------------------------------------------------*/
+  @media (min-width : 1025px) {
+    #contenedor2 {
+      font-size: 1rem;
+    }
+  }

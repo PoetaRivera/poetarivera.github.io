@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "AlmendraDisplay-Regular";
+  src: url("../fuentes/AlmendraDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Courgette-Regular";
+  src: url("../fuentes/Courgette-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Caladea-Regular";
+  src: url("../fuentes/Caladea-Regular.ttf") format("truetype");
+}
+
+
+/* Definición variables de color*/
+:root {
+  --Morado: #ede7f6;
+  --100: #d1c4e9;
+  --A100: #b388ff;
+  --A200: #7C4DFF;
+  --A400: #651FFF;
+  --A700: #6200ea;
+}
+
+
+/*--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: white;
+}
+
+
+/* contenedor principal */
+#pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1vw;
+}
+
+/*Contenedor Seccion Encabezado */
+#barraprincipal {
+  display: flex;
+  background-image: repeating-radial-gradient(#6200ea, #d1c4e9);
+  justify-content: space-between;
+  border-style: inset;
+  min-height: 70px;
+
+}
+
+/* Contenedores Fotos */
+#foto2,
+#foto1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 104.2;
+
+}
+
+#foto2 {
+  animation: movefoto2;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+ 
+}
+
+
+@keyframes movefoto2 {
+  from {
+    transform: translateX(100%);
+    opacity: 0.2;
+    scale: 2;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+#foto1 {
+  text-align: right;
+  animation: movefoto1;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  
+}
+
+@keyframes movefoto1 {
+  from {
+    transform: translateX(-100%);
+    opacity: 0.2;
+    scale: 2;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Contenedor Foto Derecha */
+/* Fotos */
+.miFoto {
+  height: 100%;
+
+}
+
+/*Contenedor Titulo de Encabezado */
+#titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* Titulo de Encabezado */
+h1 {
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-family: "Caladea-Regular", sans-serif;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.animacion-titulo {
+  animation: movetitulo;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+
+}
+
+
+@keyframes movetitulo {
+  from {
+    transform: translateY(300px);
+    opacity: 0.2;
+    scale: 2;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/****** Contenedor Seccion Menu ******/
+/* Contenedor Botones-Links */
+#links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  background-color: black;
+  margin-top: 10px;
+
+  border: none;
+  gap: 3px;
+  min-width: 200px;
+}
+
+/* Links-Botones*/
+.misLinks {
+  box-shadow: 3px 3px 3px #000;
+  padding: 3px 3px;
+  border: 1px solid var(--A700);
+  border-radius: 5px;
+  background-color: var(--A100);
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.6rem;
+  width: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  min-width: 30px;
+  transition-duration: 1s;
+}
+
+#links a:hover {
+  scale: 1.5;
+  background-color: black;
+  color: white;
+}
+
+/* Link mas a la derecha */
+#a5 {
+  margin-right: 0px;
+}
+
+/* Seccion Menu Desplegable */
+
+#menus {
+  display: flex;
+  justify-content: flex-start;
+  background-color: black;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.libros {
+  background-color: #000;
+  text-align: left;
+}
+
+#libros {
+  display: flex;
+}
+
+.libros li>ul {
+  padding-left: 40px;
+}
+
+.libros li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+/*Para todos los menus desplegables*/
+.libros li {
+  display: block;
+  padding: 3px 3px;
+  border-style: inset;
+  border: 2px solid var(--A700);
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 1%;
+  width: 80px;
+  transition-duration: 1s;
+}
+
+.libros li:hover>ul {
+  display: block;
+}
+
+.libros li:hover {
+  background-color: #434343;
+}
+
+/*-------------------------------------------------------*/
+/*Queries*/
+@media (min-width : 250px) {
+  #barraprincipal {
+    height: 70px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  #links {
+    width: 250px;
+    gap: 3px;
+    margin-bottom: 10px;
+
+  }
+
+  .misLinks {
+    width: 10%;
+    font-size: 0.6rem;
+  }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 481px) {
+  #barraprincipal {
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  #links {
+    width: 300px;
+    gap: 3px;
+    margin-bottom: 20px;
+  }
+
+  .misLinks {
+    width: 13%;
+    font-size: 0.65rem;
+  }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 769px) {
+  #barraprincipal {
+    height: 90px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  #links {
+    width: 300px;
+    gap: 3px;
+    margin-bottom: 30px;
+  }
+
+  .misLinks {
+    width: 15%;
+    font-size: 0.7rem;
+  }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 1025px) {
+  #barraprincipal {
+    height: 100px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #links {
+    width: 500px;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .misLinks {
+    width: 16%;
+    font-size: 0.9rem;
+  }
+}

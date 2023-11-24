@@ -1,237 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) google analitica -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-VE3290LDLF');
-</script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Libros de Nelson Rivera</title>
-    <link rel="stylesheet" href="paginas.css">
-   
-</script>
 
-    <style>
-    
-        
-
-      
-
-      #libros {
-        display: grid;
-        grid-template-columns: 1fr 175px 175px 1fr;
-        grid-template-rows: 350px 350px 350px 350px 350px;
-        column-gap: 2px;
-        row-gap: 10px;
-      }
-
-      a span {
-        color: yellow;
-        font-size: 10px;
-      }
-
-      .resena {
-        display: flex;
-        flex-direction: column;
-      }
-
-      p {
-        color: white;
-        text-align: justify;
-        font-size: 11px;
-        border-style: solid;
-        border-width: 3px;
-        border: yellow;
-      }
-
-      span {
-        color: #6200ea;
-        font-weight: bold;
-        font-size: 13px;
-        text-align: center;
-      }
-
-      #titulo {
-        color: white;
-      }
-
-      .lib {
-        border-block-style: solid;
-        border-top-color: #6200ea;
-        border-bottom-color: #6200ea;
-      }
-
-     
-    </style>
+    <link rel="stylesheet" href="./css/paginas.css" />
+    <link rel="stylesheet" href="./css/mislibros.css" />
   </head>
 
   <body>
     <div id="pagina">
-      <div  id="barraprincipal">
-        <div>
-          <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
+      <!-- Encabezado. Este código se repite en todas las páginas -->
+      <header id="barraprincipal">
+        <div id="foto2">
+          <img class="miFoto" src="imagenes/foto4.png" alt="" />
         </div>
         <div id="titulo">
-          <h1>Libros de Nelson Rivera</h1>
+          <h1 class="animacion-titulo">
+            Mis <br />
+            Libros
+          </h1>
         </div>
-        <div>
-          <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
+        <div id="foto1">
+          <img class="miFoto" src="imagenes/foto3.png" alt="" />
         </div>
-      </div>
+      </header>
 
-      <div id="links">
-        <a id="a1" href="acercademi.html">Acerca<br />de mí</a>
-        <a id="a2" href="index.html">El<br />inicio</a>
-        <a id="a3" href="mipoesia.html">Mi<br />poesía</a>
-        <a id="a4" href="misrelatos.html">Mis <br />Relatos</a>
-        <a id="a5" href="misnovelas.html">Mis<br />novelas</a>
-      </div>
+      <!-- Seccion Menu. Este código se repite en todas las páginas -->
+      <section id="links">
+        <a class="misLinks" id="a1" href="acercademi.html"
+          >Acerca<br />
+          de mí</a
+        >
+        <a class="misLinks" id="a2" href="index.html"
+          >Al<br />
+          inicio
+        </a>
+        <a class="misLinks" id="a3" href="mipoesia.html"
+          >Mi<br />
+          poesía</a
+        >
+        <a class="misLinks" id="a4" href="misrelatos.html"
+          >Mis<br />
+          relatos</a
+        >
+        <a class="misLinks" id="a5" href="misnovelas.html"
+          >Mis<br />
+          novelas</a
+        >
+      </section>
 
-      <div id="libros">
-        <div></div>
-        <div class="lib">
-          <img
+      <!-- Aquí comienza el html específico para esta página -->
+      <!-- Sección libros -->
+      <br />
+      <hr />
+
+      <section id="contenedor-libros">
+        <!-- Libro1 -->
+        <div class="contenedor-un-libro">
+          <h2 id="tituloLibro" class="titulo-libro">Voces del alma</h2>
+          <img id="imagenLibro"
+            class="imagen-libro"
             src="imagenes/vocesdelalma175.jpg"
             alt=""
             width="175px"
             height="261px"
           />
-        </div>
-        <div class="lib">
-          <div class="resena">
-            <span>Reseña</span>
-            <p>
-              Voces del alma, eso es lo que es cada uno de estos escritos; voces
-              en silencio que quieren ser escuchadas, voces que quieren contar
-              de bellos momentos vividos, de dolores sufridos, de sabiduría
-              ganda con lágrimas y tiempo.
-            </p>
-          </div>
-          <span class="titulo">Encuentralo en Amazon:</span>
 
-          <a
-            href="https://www.amazon.com/-/es/Nelson-Ren%C3%A9-Rivera/dp/1515311600/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZME1GOYHQALE&keywords=voces+del+alma+nelson+rivera&qid=1666490925&s=books&sprefix=voces+del+alma+nelson+rivera%2Cstripbooks%2C121&sr=1-1"
-            ><span>Link a AMAZON:Voces del alma</span></a
-          >
+          <div class="contenedor-texto">
+            <div class="resena">
+              <h3>Reseña</h3>
+              <p id="resenaLibro" >
+                Voces del alma, eso es lo que es cada uno de estos escritos;
+                voces en silencio que quieren ser escuchadas, voces que quieren
+                contar de bellos momentos vividos, de dolores sufridos, de
+                sabiduría ganada con lágrimas y tiempo.
+              </p>
+            </div>
+            <h3 class="amazon">Encuentralo en Amazon:</h3>
+            <a id="direccion"
+              href="https://www.amazon.com/-/es/Nelson-Ren%C3%A9-Rivera/dp/1515311600/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZME1GOYHQALE&keywords=voces+del+alma+nelson+rivera&qid=1666490925&s=books&sprefix=voces+del+alma+nelson+rivera%2Cstripbooks%2C121&sr=1-1"
+            >
+            </a>
+            <h4 id="tituloLink">Link a AMAZON:Voces del alma</h4>
+          </div>
+          <br />
+          <hr />
         </div>
-        <div></div>
-        <div></div>
-        <div class="lib">
+        
+        <!-- Libro2 -->
+        <div class="contenedor-un-libro">
+          <h2 id="tituloLibro">Había una vez un alma</h2>
           <img
+            class="imagen-libro"
             src="imagenes/habiaunavezunalma175.jpg"
             alt=""
             width="175px"
             height="261px"
           />
-        </div>
-        <div class="lib">
-          <div class="resena">
-            <span>Reseña</span>
-            <p>
-              Es la historia de un alma como la tuya o como la mía. Nos relata
-              el caminar de las almas; no solo en nuestro mundo, si no que nos
-              describe su andar antes de venir: su estadía en Animunnás, el
-              mundo donde residen las almas antes de nacer.
-            </p>
-          </div>
-          <span class="titulo">Encuentralo en Amazon:</span>
 
-          <a
-            href="https://www.amazon.com/s?k=habia+una+vez+un+alma&i=stripbooks&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=JVU5WF0HWUDN&sprefix=habia+una+vez+un+alma%2Cstripbooks%2C125&ref=nb_sb_noss"
-            ><span>Link a AMAZON:Había una vez un alma</span></a
-          >
+          <div class="contenedor-texto">
+            <div class="resena">
+              <h3>Reseña</h3>
+              <p id="resena">
+                Es la historia de un alma como la tuya o como la mía. Nos relata
+                el caminar de las almas; no solo en nuestro mundo, si no que nos
+                describe su andar antes de venir: su estadía en Animunnás, el
+                mundo donde residen las almas antes de nacer.
+              </p>
+            </div>
+            <h3 class="titulo">Encuentralo en Amazon:</h3>
+
+            <a
+              href="https://www.amazon.com/s?k=habia+una+vez+un+alma&i=stripbooks&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=JVU5WF0HWUDN&sprefix=habia+una+vez+un+alma%2Cstripbooks%2C125&ref=nb_sb_noss"
+            >
+              <h4>Link a AMAZON:Había una vez un alma</h4>
+            </a>
+          </div>
+          <br />
+          <hr />
         </div>
-        <div></div>
-        <div></div>
-        <div class="lib">
+
+        <!-- Libro3 -->
+        <div class="contenedor-un-libro">
+          <h2>Relatos contados por el viento y poemas</h2>
           <img
+            class="imagen-libro"
             src="imagenes/relatosypoemas175.jpg"
             alt=""
             width="175px"
             height="261px"
           />
-        </div>
-        <div class="lib">
-          <div class="resena">
-            <span>Reseña</span>
-            <p>
-              Por más que pasen milenios y el hombre crezca en inteligencia y en
-              sabiduría, y su tecnología linde lo inverosímil y la ciencia sea
-              la única luz que lo guíe; nunca, jamás, dejará de anhelar en su
-              vida un poco de fantasía.
-            </p>
-          </div>
-          <span class="titulo">Encuentralo en Amazon:</span>
 
-          <a
-            href="https://www.amazon.com/-/es/Nelson-Rivera/dp/B08M8DBJN1/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=O56U47SW0WV1&keywords=relatos+contados+por+el+viento+nelson+rivera&qid=1666491180&qu=eyJxc2MiOiIwLjkxIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&s=books&sprefix=relatos+contados+por+el+viento+nelson+rivera%2Cstripbooks-intl-ship%2C121&sr=1-1"
-            ><span
-              >Link a AMAZON:Relatos contados por el viento y poemas</span
-            ></a
-          >
+          <div class="contenedor-texto">
+            <div class="resena">
+              <h3>Reseña</h3>
+              <p>
+                Por más que pasen milenios y el hombre crezca en inteligencia y
+                en sabiduría, y su tecnología linde lo inverosímil y la ciencia
+                sea la única luz que lo guíe; nunca, jamás, dejará de anhelar en
+                su vida un poco de fantasía.
+              </p>
+            </div>
+            <h3 class="titulo">Encuentralo en Amazon:</h3>
+
+            <a
+              href="https://www.amazon.com/-/es/Nelson-Rivera/dp/B08M8DBJN1/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=O56U47SW0WV1&keywords=relatos+contados+por+el+viento+nelson+rivera&qid=1666491180&qu=eyJxc2MiOiIwLjkxIiwicXNhIjoiMC4wMCIsInFzcCI6IjAuMDAifQ%3D%3D&s=books&sprefix=relatos+contados+por+el+viento+nelson+rivera%2Cstripbooks-intl-ship%2C121&sr=1-1"
+            >
+              <h4>Link a AMAZON:Relatos contados por el viento y poemas</h4>
+            </a>
+          </div>
+          <br />
+          <hr />
         </div>
-        <div></div>
-        <div></div>
-        <div class="lib">
+        <!-- Libro4 -->
+        <div class="contenedor-un-libro">
+          <h2>El perfume de la espera</h2>
           <img
+            class="imagen-libro"
             src="imagenes/elperfumedelaespera175.jpg"
             alt=""
             width="175px"
             height="261px"
           />
-        </div>
-        <div class="lib">
-          <div class="resena">
-            <span>Reseña</span>
-            <p>
-              Un apasionado poemario que avasalla los sentidos del lector;
-              obligándolo a oler esa hechizada fragancia, letra a letra de cada
-              poema; poesía donde se une la delicadeza y el salvajismo de dos
-              plumas con esencias totalmente diferentes.
-            </p>
-          </div>
-          <span class="titulo">Encuentralo en Amazon:</span>
 
-          <a
-            href="https://www.amazon.com/s?k=el+perfume+de+la+espera&i=stripbooks&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TM2N0BAG5KSS&sprefix=el+perfume+de+la+espera%2Cstripbooks%2C135&ref=nb_sb_noss"
-            ><span>Link a AMAZON:El perfume de la espera</span></a
-          >
+          <div class="contenedor-texto">
+            <div class="resena">
+              <h3>Reseña</h3>
+              <p>
+                Un apasionado poemario que avasalla los sentidos del lector;
+                obligándolo a oler esa hechizada fragancia, letra a letra de
+                cada poema; poesía donde se une la delicadeza y el salvajismo de
+                dos plumas con esencias totalmente diferentes.
+              </p>
+            </div>
+            <h3 class="titulo">Encuentralo en Amazon:</h3>
+
+            <a
+              href="https://www.amazon.com/s?k=el+perfume+de+la+espera&i=stripbooks&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TM2N0BAG5KSS&sprefix=el+perfume+de+la+espera%2Cstripbooks%2C135&ref=nb_sb_noss"
+            >
+              <h4>Link a AMAZON:El perfume de la espera</h4>
+            </a>
+          </div>
+          <br />
+          <hr />
         </div>
-        <div></div>
-        <div></div>
-        <div class="lib">
+        <!-- Libro5 -->
+        <div class="contenedor-un-libro">
+          <h2>Un amor que nunca llegó</h2>
           <img
+            class="imagen-libro"
             src="imagenes/unamorquenuncallego175.jpg"
             alt=""
             width="175px"
             height="261px"
           />
-        </div>
-        <div class="lib">
-          <div class="resena">
-            <span>Reseña</span>
-            <p>
-              Es la historia de amor de dos escritores, es la historia de Sarah
-              y Carlo. Nos relata el riesgozo camino de Carlo atraves de su
-              travesía hacia Sarah, y de la lucha de ella, por lograr el ansiado
-              sueño americano.
-            </p>
+
+          <div class="contenedor-texto">
+            <div class="resena">
+              <h3>Reseña</h3>
+              <p>
+                Es la historia de amor de dos escritores, es la historia de
+                Sarah y Carlo. Nos relata el riesgozo camino de Carlo atraves de
+                su travesía hacia Sarah, y de la lucha de ella, por lograr el
+                ansiado sueño americano.
+              </p>
+            </div>
+            <h3 class="amazon">Encuentralo en Amazon:</h3>
+            <a
+              href="https://www.amazon.com/-/es/Isela-Esc%C3%A1rcega-ebook/dp/B08CBRZGC1/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1BCHYUYBKP9OY&keywords=un+amor+que+nunca+llego&qid=1666324280&s=books&sprefix=un+amor+que+nunca+llego%2Cstripbooks%2C134&sr=1-1"
+            >
+              <h4>Link a AMAZON:Un amor que nunca llegó</h4>
+            </a>
           </div>
-          <span class="titulo">Encuentralo en Amazon:</span>
-          <a
-            href="https://www.amazon.com/-/es/Isela-Esc%C3%A1rcega-ebook/dp/B08CBRZGC1/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1BCHYUYBKP9OY&keywords=un+amor+que+nunca+llego&qid=1666324280&s=books&sprefix=un+amor+que+nunca+llego%2Cstripbooks%2C134&sr=1-1"
-            ><span>Link a AMAZON:Un amor que nunca llego</span></a
-          >
+          <br />
+          <hr />
         </div>
-        <div></div>
-      </div>
+      </section>
     </div>
   </body>
 </html>

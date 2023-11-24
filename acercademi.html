@@ -1,111 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) google analitica -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VE3290LDLF"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-VE3290LDLF");
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acerca de mí</title>
-    <link rel="stylesheet" href="paginas.css">
-  </head>
-  <style>
-    
-   
+<head>
 
-   
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca de mí</title>
+  <link rel="stylesheet" href="./css/paginas.css">
+  <link rel="stylesheet" href="./css/acercademi.css">
+</head>
 
-   
+<body>
+  <div id="pagina">
 
-   
-
-   
-
-   
-
-    #links a:hover {
-      background-color: white;
-      color: var(--A100);
-    }
-
-    #contenedor2 {
-      text-align: justify;
-      margin-top: 8px;
-      font-size: 10px;
-    }
-
-    #img3 {
-      float: left;
-      opacity: 1;
-      border-style: solid;
-      border-width: 8px;
-      border-color: black;
-      border-top: 0px;
-      border-bottom: 4px;
-    }
-  </style>
-
-  <body>
-    <div id="pagina">
-      <div id="barraprincipal">
-        <div>
-          <img src="imagenes/foto2.png" alt="" width="104.2" height="140.8" />
-        </div>
-        <div id="titulo">
-          <h1>Poesía de Nelson Rivera</h1>
-        </div>
-        <div>
-          <img src="imagenes/foto1.png" alt="" width="104.2" height="140.8" />
-        </div>
+    <!-- Encabezado -->
+    <header id="barraprincipal">
+      <div id="foto2">
+        <img class="miFoto" src="imagenes/foto4.png" alt="" />
       </div>
-
-      <div id="links">
-        <a id="a1" href="index.html"
-          >El<br />
-          inicio</a
-        >
-        <a id="a2" href="mipoesia.html"
-          >Mi<br />
-          poesía
-        </a>
-        <a id="a3" href="misrelatos.html"
-          >Mis<br />
-          relatos</a
-        >
-        <a id="a4" href="mislibros.html"
-          >Mis<br />
-          libros</a
-        >
-        <a id="a5" href="misnovelas.html"
-          >Mis<br />
-          novelas</a
-        >
+      <div id="titulo">
+        <h1 class="animacion-titulo">Acerca <br> de mí</h1>
       </div>
+      <div id="foto1">
+        <img class="miFoto" src="imagenes/foto3.png" alt="" />
+      </div>
+    </header>
 
-      <div id="contenedor2">
-        <img
-          id="img3"
-          src="imagenes/mifoto.jpg"
-          alt="Yo"
-          width="200"
-          height="267"
-        />
+    <!-- Seccion Menu -->
+    <section id="links">
+      <a class="misLinks" id="a1" href="index.html">Al<br />
+        inicio</a>
+      <a class="misLinks" id="a2" href="mipoesia.html">Mi<br />
+        poesía
+      </a>
+      <a class="misLinks" id="a3" href="misrelatos.html">Mis<br />
+        relatos</a>
+      <a class="misLinks" id="a4" href="mislibros.html">Mis<br />
+        libros</a>
+      <a class="misLinks" id="a5" href="misnovelas.html">Mis<br />
+        novelas</a>
+    </section>
 
+
+    <div id="contenedor2">
+      <img id="img3" src="imagenes/mifoto2.jpg" alt="Yo" width="200" height="267" />
+      <p id="miparrafo">
         Mi nombre es Nelson René Rivera Vides, de nacionalidad centroamericana,
         nacido específicamente en El Salvador en el año de 1959. Descubrí hace
-        unos cuantos años, específicamente en el año 2014 que me gustaba
+        unos cuantos años, justo en el año 2014, que me gustaba
         escribir. En esa época comencé a hacer mis primeros escritos, en ese
         momento no contaba con una buena formación en el ámbito de la ortografía
         y de la gramática de nuestro lenguaje, muchos menos en el área
@@ -121,7 +64,13 @@
         incursionado el mundo de los relatos y me aventuré a escribir un par de
         novelas. Sin duda, escribir y programar son dos cosas que disfruto
         hacer. Y doy gracias por haber tenido la oportunidad de lograrlo.
-      </div>
+        Por cierto, espero le guste la página la cual ha sido elaborada por mí,
+        así que en ella están unidas dos de mis pasiones el escribir y el programar.
+      </p>
+
     </div>
-  </body>
+  </div>
+
+</body>
+
 </html>
