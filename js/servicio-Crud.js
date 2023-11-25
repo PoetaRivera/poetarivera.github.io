@@ -5,7 +5,7 @@ import {
   miExistencia,
 } from "./CRUD/funcionesClick.js";
 
-const rutaServidor = "http://localhost:5000"; //ruta servidor
+const rutaServidor = "https://servidorcomentarios.onrender.com"; //ruta servidor
 let nombre, pais, password, comentario;
 const mensajeNombre = "Nombre, solo carácteres alfanuméricos sin espacios";
 const mensajePais = "País, solo carácters alfanuméricos";
