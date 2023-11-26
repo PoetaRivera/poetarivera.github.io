@@ -275,15 +275,15 @@ ul {
   }
 
   #links {
-    width: 250px;
-    gap: 3px;
+    width: 300px;
+    gap: 4px;
     margin-bottom: 10px;
 
   }
 
   .misLinks {
-    width: 10%;
-    font-size: 0.6rem;
+    width: 14%;
+    font-size: 0.7rem;
   }
 }
 
@@ -299,14 +299,14 @@ ul {
   }
 
   #links {
-    width: 300px;
-    gap: 3px;
+    width: 350px;
+    gap: 4px;
     margin-bottom: 20px;
   }
 
   .misLinks {
-    width: 13%;
-    font-size: 0.65rem;
+    width: 15%;
+    font-size: 0.8rem;
   }
 }
 
@@ -322,14 +322,14 @@ ul {
   }
 
   #links {
-    width: 300px;
-    gap: 3px;
+    width: 350px;
+    gap: 6px;
     margin-bottom: 30px;
   }
 
   .misLinks {
     width: 15%;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -345,13 +345,13 @@ ul {
   }
 
   #links {
-    width: 500px;
-    gap: 10px;
+    width: 600px;
+    gap: 15px;
     margin-bottom: 40px;
   }
 
   .misLinks {
     width: 16%;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }
