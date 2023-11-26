@@ -261,11 +261,14 @@ Contenedor pensamientos y botones */
 
 .ver-comentarios {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: start;
   padding: 10px;
   margin-bottom: 50px;
-
+  margin-top: 50px;
+  width: 100vw;
 }
 
 .p-nombre {
