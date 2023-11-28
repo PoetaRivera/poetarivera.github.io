@@ -68,7 +68,7 @@ body {
   animation: movefoto2;
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
- 
+
 }
 
 
@@ -91,7 +91,7 @@ body {
   animation: movefoto1;
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
-  
+
 }
 
 @keyframes movefoto1 {
@@ -168,7 +168,6 @@ h1 {
   align-self: center;
   background-color: black;
   margin-top: 10px;
-
   border: none;
   gap: 3px;
   min-width: 200px;
@@ -204,39 +203,52 @@ h1 {
   margin-right: 0px;
 }
 
-/* Seccion Menu Desplegable */
 
+
+/* Seccion Menu Desplegable----------------------------------------------------- */
+/*Contenedor principal del menu desplegable es un div*/
 #menus {
   display: flex;
   justify-content: flex-start;
-  background-color: black;
+  align-items: center;
+  padding-left: 3vw;
   border: none;
+  height: 100px;
 }
 
 ul {
   list-style: none;
 }
 
+/* Primer ul que contiene el li libros */
 .libros {
-  background-color: #000;
-  text-align: left;
+  height: 20px;
+  width: 100px;
 }
 
+/* li que contien los 3 ul que referencian los libros */
 #libros {
+  /*Use flex row para poder centrar la letra*/
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 10px;
+  height: 20px;
+
 }
 
+/**/
 .libros li>ul {
-  padding-left: 40px;
-}
-
-.libros li ul {
   display: none;
-  position: absolute;
-  min-width: 140px;
+  position: relative;
+  left: 105px;
+  top: -5px;
+  min-width: 100px;
+  max-height: 10px;
 }
 
-/*Para todos los menus desplegables*/
+/*Para todos los li*/
 .libros li {
   display: block;
   padding: 3px 3px;
@@ -248,19 +260,23 @@ ul {
   text-decoration: none;
   text-align: center;
   font-size: 0.7rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 1%;
-  width: 80px;
-  transition-duration: 1s;
+  width: 100px;
 }
 
+/* Hace aparecer el menu segun se pone el foco en el elmento */
 .libros li:hover>ul {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Cambai el background del elemento li en el que se tiene el foco */
 .libros li:hover {
   background-color: #434343;
+}
+
+/* Desaparece todo el menu al hacer click y soltar, en cualquier elemento ul */
+.libros li:active>ul {
+  display: none;
 }
 
 /*-------------------------------------------------------*/
@@ -285,6 +301,18 @@ ul {
     width: 14%;
     font-size: 0.7rem;
   }
+
+    .libros li>ul {
+      left: 55px;
+      top: -5px;
+      min-width: 50px;
+    }
+
+  .libros li{
+    font-size: 0.5rem;
+      width: 50px;
+  }
+
 }
 
 /*-------------------------------------------------------*/
@@ -308,6 +336,18 @@ ul {
     width: 15%;
     font-size: 0.8rem;
   }
+
+     .libros li>ul {
+       left: 80px;
+       top: -5px;
+       min-width: 50px;
+     }
+  
+     .libros li {
+       font-size: 0.6rem;
+       width: 75px;
+     }
+
 }
 
 /*-------------------------------------------------------*/
@@ -331,6 +371,18 @@ ul {
     width: 15%;
     font-size: 0.8rem;
   }
+
+ .libros li>ul {
+   left: 105px;
+   top: -5px;
+   min-width: 100px;
+ }
+
+ .libros li {
+   font-size: 0.7rem;
+   width: 100px;
+ }
+
 }
 
 /*-------------------------------------------------------*/

@@ -1,17 +1,17 @@
 $(document).ready(function () {
-  //libro:Voces del alma/sección amor
+  //libro:Voces del alma
   $("#libro1").mouseover(ponertitulo);
   $("#amor1 li").mouseover(presentar);
   $("#desamor1 li").mouseover(presentar);
   $("#deseo1 li").mouseover(presentar);
   $("#vida1 li").mouseover(presentar);
-
+  //libro:El perfume de la espera
   $("#libro2").mouseover(ponertitulo);
   $("#amor2 li").mouseover(presentar);
   $("#intimidad li").mouseover(presentar);
   $("#anoranza li").mouseover(presentar);
   $("#vida2 li").mouseover(presentar);
-
+  //libro:Relatos de pueblo y poemas
   $("#libro3").mouseover(ponertitulo);
   $("#amor3 li").mouseover(presentar);
   $("#varios li").mouseover(presentar);
