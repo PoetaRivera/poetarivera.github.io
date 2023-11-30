@@ -1,218 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poesía de Nelson Rivera</title>
 
-    <link rel="stylesheet" href="./css/paginas.css" />
-    <link rel="stylesheet" href="./css/mipoesia.css" />
-    <script src="./js/jquery-3.6.0.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poesía de Nelson Rivera</title>
 
-  <body>
-    <div id="pagina">
-      <!-- Encabezado -->
-      <header id="barraprincipal">
-        <div id="foto2">
-          <img class="miFoto" src="imagenes/foto4.png" alt="" />
-        </div>
-        <div id="titulo">
-          <h1 class="animacion-titulo">
-            Mi <br />
-            Poesía
-          </h1>
-        </div>
-        <div id="foto1">
-          <img class="miFoto" src="imagenes/foto3.png" alt="" />
-        </div>
-      </header>
+  <link rel="stylesheet" href="./css/paginas.css" />
+  <link rel="stylesheet" href="./css/menudesplegable.css" />
+  <link rel="stylesheet" href="./css/mipoesia.css" />
+  <script src="./js/jquery-3.6.0.js"></script>
+</head>
 
-      <!-- Seccion Menu -->
-      <section id="links">
-        <a class="misLinks" id="a1" href="acercademi.html"
-          >Acerca<br />
-          de mí</a
-        >
-        <a class="misLinks" id="a2" href="index.html"
-          >Al<br />
-          inicio
-        </a>
-        <a class="misLinks" id="a3" href="misrelatos.html"
-          >Mis<br />
-          relatos</a
-        >
-        <a class="misLinks" id="a4" href="mislibros.html"
-          >Mis<br />
-          libros</a
-        >
-        <a class="misLinks" id="a5" href="misnovelas.html"
-          >Mis<br />
-          novelas</a
-        >
-      </section>
-
-      <!-- Seccion Player -->
-      <div id="audios">
-        <div id="hayaudio"></div>
-        <audio controls id="audio">
-          <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
-          Tu navegador no admite mp3
-        </audio>
+<body>
+  <div id="pagina">
+    <!-- Encabezado -->
+    <header id="barraprincipal">
+      <div id="foto2">
+        <img class="miFoto" src="imagenes/foto4.png" alt="" />
       </div>
-
-      <!-- Seccion Menu Desplegable -->
-      <seccion id="menus">
-        <ul class="libros">
-          <li id="libros">
-            Seleciona un libro
-            <ul id= "ullibros">
-              <!-- ---------------------------------------------------------------------------------- -->
-              <li id="libro1">
-                Voces del alma
-                <ul class="ul3libros">
-                  <li class="listavoces">
-                    Amor
-                    <ul class="secciones" id="amor1">
-                      <li id="p1">Cómo saber que la amas</li>
-                      <li id="p2">Cuando mis ojos te contemplan</li>
-                      <li id="p3">Quisiera ser un gran poeta</li>
-                      <li id="p4">Eres...</li>
-                      <li id="p5">Unidos por la poesía</li>
-                      <li id="p6">Así es ella</li>
-                    </ul>
-                  </li>
-                  <li class="listavoces">
-                    Desamor
-                    <ul class="secciones" id="desamor1">
-                      <li id="p7">Te extraño</li>
-                      <li id="p8">En vano</li>
-                      <li id="p9">He de olvidarte</li>
-                      <li id="p10">Brisa de octubre</li>
-                      <li id="p11">Te amé I</li>
-                    </ul>
-                  </li>
-                  <li class="listavoces">
-                    Deseo
-                    <ul class="secciones" id="deseo1">
-                      <li id="p12">Instante primero</li>
-                      <li id="p13">Amandote I</li>
-                      <li id="p14">Amandote II</li>
-                    </ul>
-                  </li>
-                  <li class="listavoces">
-                    A la vida
-                    <ul class="secciones" id="vida1">
-                      <li id="p15">Hay momentos</li>
-                      <li id="p16">No te rindas</li>
-                      <li id="p17">La felicidad</li>
-                      <li id="p18">El mendigo</li>
-                      <li id="p19">Un día</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <!-- ------------------------------------------------------------------------------------- -->
-              <li id="libro2">
-                El perfume de la espera
-                <ul class="ul3libros">
-                  <li class="listavoces">
-                    Amor
-                    <ul class="secciones" id="amor2">
-                      <li id="p20">Amantes en el almendro</li>
-                      <li id="p21">Súbito soplo</li>
-                      <li id="p22">Lejanía</li>
-                      <li id="p23">En mi ventana</li>
-                      <li id="p24">Ansioso espero</li>
-                      <li id="p25">Esta distancia</li>
-                    </ul>
-                  </li>
-                  <li class="listavoces">
-                    Intimidades
-                    <ul class="secciones" id="intimidad">
-                      <li id="p26">Amándose I</li>
-                      <li id="p27">Amándose III</li>
-                      <li id="p28">Ella y él</li>
-                      <li id="p29">Sombra furtiva</li>
-                      <li id="p30">Río mío</li>
-                    </ul>
-                  </li>
-                  <li class="listavoces">
-                    Añoranza
-                    <ul class="secciones" id="anoranza">
-                      <li id="p31">Aquí yo la espero</li>
-                      <li id="p32">fuiste mía</li>
-                      <li id="p33">Sueños deshojados</li>
-                      <li id="p34">Mi vaquera</li>
-                      <li id="p35">Su partida</li>
-                      <li id="p36">Su sonrisa</li>
-                      <li id="p37">Amé</li>
-                      <li id="p38">Quizá te olvide un día</li>
-                      <li id="p39">Si duerme usted primero</li>
-                    </ul>
-                  </li>
-                  <li class="listavoces">
-                    Vida
-                    <ul class="secciones" id="vida2">
-                      <li id="p40">Volviendo a soñar</li>
-                      <li id="p41">Somos</li>
-                      <li id="p42">La niña</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <!-- ----------------------------------------------------------------------------------- -->
-              <li id="libro3">
-                Relatos y poemas
-                <ul class="ul3libros">
-                  <li class="listavoces">
-                    Amor
-                    <ul class="secciones" id="amor3">
-                      <li id="p43">Amor es...</li>
-                      <li id="p44">Hay amores...</li>
-                      <li id="p45">Ella</li>
-                      <li id="p46">Con la mirada...</li>
-                      <li id="p47">Un amor que nunca llegó</li>
-                    </ul>
-                  </li>
-                  <li class="listavoces">
-                    Varios
-                    <ul class="secciones" id="varios">
-                      <li id="p48">Noche</li>
-                      <li id="p49">Se fue</li>
-                      <li id="p50">El arribo</li>
-                      <li id="p51">Niño de la calle</li>
-                      <li id="p52">Corazón de torogoz</li>
-                      <li id="p53">Quizá</li>
-                      <li id="p54">Sueños truncados</li>
-                      <li id="p55">Ella lleva un hijo</li>
-                      <li id="p56">Día triste</li>
-                      <li id="p57">Mi Centro América</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <!-- ----------------------------------------------------------------------------------------  -->
-            </ul>
-          </li>
-        </ul>
-      </seccion>
-<!-- Seccion despliegue de imagenes y poemas -->
-      <div id="titulopoema">
-        <h2 id="enlace1">Mis Poemas</h2>
+      <div id="titulo">
+        <h1 class="animacion-titulo">
+          Mi <br />
+          Poesía
+        </h1>
       </div>
-
-      <div id="modulo1">
-        <iframe
-          id="texto"
-          title="Texto de poema"
-          aling
-          src="./imagenes/mifoto3.png"
-        >
-        </iframe>
+      <div id="foto1">
+        <img class="miFoto" src="imagenes/foto3.png" alt="" />
       </div>
+    </header>
+
+    <!-- Seccion Menu -->
+    <div id="links">
+      <a class="misLinks" id="a1" href="acercademi.html">Acerca<br />
+        de mí</a>
+      <a class="misLinks" id="a2" href="index.html">Al<br />
+        inicio
+      </a>
+      <a class="misLinks" id="a3" href="misrelatos.html">Mis<br />
+        relatos</a>
+      <a class="misLinks" id="a4" href="mislibros.html">Mis<br />
+        libros</a>
+      <a class="misLinks" id="a5" href="misnovelas.html">Mis<br />
+        novelas</a>
     </div>
-    <script src="./js/mipoesia.js"></script>
-  </body>
+
+    <!-- Seccion Player -->
+    <div id="audios">
+      <div id="hayaudio"></div>
+      <audio controls id="audio">
+        <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
+        Tu navegador no admite mp3
+      </audio>
+    </div>
+
+    <!-- Seccion Menu Desplegable -->
+    <div id="seleccione">Seleccione un libro</div>
+    <seccion id="menus">
+      <ul class="ul-libro" id="ullibro1">
+        <li class="li-libro" id="lilibro1">
+          Voces del alma
+          <ul class="ul-secciones">
+            <li class="li-secciones">
+              Amor
+              <ul class="seccion" id="amor1">
+                <li id="p1">Cómo saber que la amas</li>
+                <li id="p2">Cuando mis ojos te contemplan</li>
+                <li id="p3">Quisiera ser un gran poeta</li>
+                <li id="p4">Eres...</li>
+                <li id="p5">Unidos por la poesía</li>
+                <li id="p6">Así es ella</li>
+              </ul>
+            </li>
+            <li class="li-secciones">
+              Desamor
+              <ul class="seccion" id="desamor1">
+                <li id="p7">Te extraño</li>
+                <li id="p8">En vano</li>
+                <li id="p9">He de olvidarte</li>
+                <li id="p10">Brisa de octubre</li>
+                <li id="p11">Te amé I</li>
+              </ul>
+            </li>
+            <li class="li-secciones">
+              Deseo
+              <ul class="seccion" id="deseo1">
+                <li id="p12">Instante primero</li>
+                <li id="p13">Amandote I</li>
+                <li id="p14">Amandote II</li>
+              </ul>
+            </li>
+            <li class="li-secciones">
+              A la vida
+              <ul class="seccion" id="vida1">
+                <li id="p15">Hay momentos</li>
+                <li id="p16">No te rindas</li>
+                <li id="p17">La felicidad</li>
+                <li id="p18">El mendigo</li>
+                <li id="p19">Un día</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- ------------------------------------------------------------------------------------- -->
+      <ul class="ul-libro" id="ullibro2">
+        <li class="li-libro" id="lilibro2">
+          El perfume 
+          <ul class="ul-secciones">
+            <li class="li-secciones">
+              Amor
+              <ul class="seccion" id="amor2">
+                <li id="p20">Amantes en el almendro</li>
+                <li id="p21">Súbito soplo</li>
+                <li id="p22">Lejanía</li>
+                <li id="p23">En mi ventana</li>
+                <li id="p24">Ansioso espero</li>
+                <li id="p25">Esta distancia</li>
+              </ul>
+            </li>
+            <li class="li-secciones">
+              Intimidades
+              <ul class="seccion" id="intimidad">
+                <li id="p26">Amándose I</li>
+                <li id="p27">Amándose III</li>
+                <li id="p28">Ella y él</li>
+                <li id="p29">Sombra furtiva</li>
+                <li id="p30">Río mío</li>
+              </ul>
+            </li>
+            <li class="li-secciones">
+              Añoranza
+              <ul class="seccion" id="anoranza">
+                <li id="p31">Aquí yo la espero</li>
+                <li id="p32">fuiste mía</li>
+                <li id="p33">Sueños deshojados</li>
+                <li id="p34">Mi vaquera</li>
+                <li id="p35">Su partida</li>
+                <li id="p36">Su sonrisa</li>
+                <li id="p37">Amé</li>
+                <li id="p38">Quizá te olvide un día</li>
+                <li id="p39">Si duerme usted primero</li>
+              </ul>
+            </li>
+            <li class="li-secciones">
+              Vida
+              <ul class="seccion" id="vida2">
+                <li id="p40">Volviendo a soñar</li>
+                <li id="p41">Somos</li>
+                <li id="p42">La niña</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- ----------------------------------------------------------------------------------- -->
+      <ul class="ul-libro" id="ullibro3">
+        <li class="li-libro" id="lilibro3">
+          Relatos y poemas
+          <ul class="ul-secciones">
+            <li class="li-secciones">
+              Amor
+              <ul class="seccion" id="amor3">
+                <li id="p43">Amor es...</li>
+                <li id="p44">Hay amores...</li>
+                <li id="p45">Ella</li>
+                <li id="p46">Con la mirada...</li>
+                <li id="p47">Un amor que nunca llegó</li>
+              </ul>
+            </li>
+            <li class="li-secciones">
+              Varios
+              <ul class="seccion" id="varios">
+                <li id="p48">Noche</li>
+                <li id="p49">Se fue</li>
+                <li id="p50">El arribo</li>
+                <li id="p51">Niño de la calle</li>
+                <li id="p52">Corazón de torogoz</li>
+                <li id="p53">Quizá</li>
+                <li id="p54">Sueños truncados</li>
+                <li id="p55">Ella lleva un hijo</li>
+                <li id="p56">Día triste</li>
+                <li id="p57">Mi Centro América</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- ----------------------------------------------------------------------------------------  -->
+
+    </seccion>
+    <!-- Seccion despliegue de imagenes y poemas -->
+    <div id="titulopoema">
+      <h2 id="enlace1">Mis Poemas</h2>
+    </div>
+
+    <div id="modulo1">
+      <iframe id="texto" title="Texto de poema" aling src="./imagenes/mifoto3.png">
+      </iframe>
+    </div>
+  </div>
+  <script src="./js/mipoesia copy.js"></script>
+</body>
+
 </html>

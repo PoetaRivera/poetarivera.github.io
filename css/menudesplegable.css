@@ -1,0 +1,183 @@
+/* Seccion Menu Desplegable----------------------------------------------------- */
+/*Contenedor principal del menu desplegable es un seccion*/
+
+#seleccione{
+color:var(--A700);
+}
+#menus {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Primer ul que contiene el li libros */
+.ul-libro {
+    height: 30px;
+    width: 70px;
+   }
+
+
+.li-libro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+
+}
+
+
+.ul-libro li>ul {
+    display: none;
+    position: relative;
+    left: 105px;
+    top: -5px;
+    min-width: 100px;
+    max-height: 10px;
+}
+
+/*Para todos los li*/
+.ul-libro li {
+    display: block;
+    padding: 6px 3px 3px 3px;
+    border-style: inset;
+    border: 2px solid var(--A700);
+    border-radius: 5px;
+    color: var(--A700);
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(black, black, var(--A100));
+}
+
+/* Hace aparecer el menu segun se pone el foco en el elmento */
+.ul-libro li:hover>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.ul-secciones .li-secciones>.seccion {
+    display: none;
+    position: relative;
+    left: 70px;
+    top: 0px;
+    min-width: 100px;
+    max-height: 10px;
+}
+
+.ul-secciones .li-secciones:hover>.seccion {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Cambai el background del elemento li en el que se tiene el foco */
+.ul-libro li:hover {
+    background-color: #434343;
+}
+
+/* Desaparece todo el menu al hacer click y soltar, en cualquier elemento ul */
+
+
+/*-------------------------------------------------------*/
+/*Queries*/
+@media (min-width : 300px) {
+
+   /*------menu desplegable------*/
+    #menus {
+        gap: 15px;
+    }
+
+    .ul-libro {
+        width: 70px;
+
+    }
+
+    .ul-libro li {
+        width: 70px;
+        font-size: 0.6rem;
+        height: 20px;
+    }
+
+
+
+    .ul-libro li>ul {
+        display: none;
+        position: relative;
+        left: -3px;
+        top: 10px;
+        min-width: 100px;
+        max-height: 10px;
+    }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 481px) {
+
+/*------menu desplegable------*/
+    #menus {
+    gap: 35px;
+    
+    }
+    
+    .ul-libro {
+        width: 70px;
+    }
+
+    .ul-libro li {
+        width: 70px;
+        font-size: 0.6rem;
+        height: 20px;
+    }
+
+    .ul-libro li>ul {
+        display: none;
+        position: relative;
+        left: -3px;
+        top: 10px;
+        min-width: 100px;
+        max-height: 10px;
+    }
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 769px) {
+    #menus {
+            gap: 45px;
+             }
+    
+        .ul-libro {
+            width: 70px;
+        }
+    
+        .ul-libro li {
+            width: 70px;
+            font-size: 0.6rem;
+            height: 20px;
+        }
+    
+        .ul-libro li>ul {
+            display: none;
+            position: relative;
+            left: -3px;
+            top: 10px;
+            min-width: 100px;
+            max-height: 10px;
+        }
+
+   
+
+}
+
+/*-------------------------------------------------------*/
+@media (min-width : 1025px) {
+   
+}

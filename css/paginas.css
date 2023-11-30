@@ -22,6 +22,8 @@
   --A200: #7C4DFF;
   --A400: #651FFF;
   --A700: #6200ea;
+  --A0700:rgb(98, 0, 234, .8);
+  --A0100:rgb(98, 0, 234, .5);
 }
 
 
@@ -48,12 +50,11 @@ body {
 /*Contenedor Seccion Encabezado */
 #barraprincipal {
   display: flex;
-  background-image: repeating-radial-gradient(#6200ea, #d1c4e9);
+  flex-direction: row;
+  background-image:radial-gradient(var(--100), var(--A100), var(--A200), var(--A700));
   justify-content: space-between;
   border-style: inset;
-  min-height: 70px;
-
-}
+ }
 
 /* Contenedores Fotos */
 #foto2,
@@ -139,7 +140,6 @@ h1 {
   animation: movetitulo;
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
-
 }
 
 
@@ -170,7 +170,7 @@ h1 {
   margin-top: 10px;
   border: none;
   gap: 3px;
-  min-width: 200px;
+  width: 100%;
 }
 
 /* Links-Botones*/
@@ -179,8 +179,8 @@ h1 {
   padding: 3px 3px;
   border: 1px solid var(--A700);
   border-radius: 5px;
-  background-color: var(--A100);
-  color: black;
+  background-image: radial-gradient(black, black, var(--A100));
+  color: var(--A700);
   text-decoration: none;
   text-align: center;
   font-size: 0.6rem;
@@ -194,8 +194,8 @@ h1 {
 
 #links a:hover {
   scale: 1.5;
-  background-color: black;
-  color: white;
+  background-image: radial-gradient(rgb(0,0,0,0.5), rgb(0, 0, 0, 0.5));
+  color:white;
 }
 
 /* Link mas a la derecha */
@@ -203,118 +203,33 @@ h1 {
   margin-right: 0px;
 }
 
-
-
-/* Seccion Menu Desplegable----------------------------------------------------- */
-/*Contenedor principal del menu desplegable es un div*/
-#menus {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 3vw;
-  border: none;
-  height: 100px;
-}
-
-ul {
-  list-style: none;
-}
-
-/* Primer ul que contiene el li libros */
-.libros {
-  height: 20px;
-  width: 100px;
-}
-
-/* li que contien los 3 ul que referencian los libros */
-#libros {
-  /*Use flex row para poder centrar la letra*/
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-width: 10px;
-  height: 20px;
-
-}
-
-/**/
-.libros li>ul {
-  display: none;
-  position: relative;
-  left: 105px;
-  top: -5px;
-  min-width: 100px;
-  max-height: 10px;
-}
-
-/*Para todos los li*/
-.libros li {
-  display: block;
-  padding: 3px 3px;
-  border-style: inset;
-  border: 2px solid var(--A700);
-  border-radius: 5px;
-  background-color: #000;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  font-size: 0.7rem;
-  width: 100px;
-}
-
-/* Hace aparecer el menu segun se pone el foco en el elmento */
-.libros li:hover>ul {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Cambai el background del elemento li en el que se tiene el foco */
-.libros li:hover {
-  background-color: #434343;
-}
-
-/* Desaparece todo el menu al hacer click y soltar, en cualquier elemento ul */
-.libros li:active>ul {
-  display: none;
-}
-
 /*-------------------------------------------------------*/
 /*Queries*/
 @media (min-width : 250px) {
+
+  /*Encabezado*/
   #barraprincipal {
     height: 70px;
+
   }
 
   h1 {
     font-size: 1rem;
   }
 
+  /*menu principal*/
   #links {
-    width: 300px;
     gap: 4px;
     margin-bottom: 10px;
-
+    
   }
 
   .misLinks {
     width: 14%;
-    font-size: 0.7rem;
-  }
-
-    .libros li>ul {
-      left: 55px;
-      top: -5px;
-      min-width: 50px;
-    }
-
-  .libros li{
-    font-size: 0.5rem;
-      width: 50px;
+    font-size: 0.8rem;
   }
 
 }
-
 /*-------------------------------------------------------*/
 @media (min-width : 481px) {
   #barraprincipal {
@@ -327,7 +242,7 @@ ul {
   }
 
   #links {
-    width: 350px;
+   
     gap: 4px;
     margin-bottom: 20px;
   }
@@ -336,18 +251,6 @@ ul {
     width: 15%;
     font-size: 0.8rem;
   }
-
-     .libros li>ul {
-       left: 80px;
-       top: -5px;
-       min-width: 50px;
-     }
-  
-     .libros li {
-       font-size: 0.6rem;
-       width: 75px;
-     }
-
 }
 
 /*-------------------------------------------------------*/
@@ -362,7 +265,6 @@ ul {
   }
 
   #links {
-    width: 350px;
     gap: 6px;
     margin-bottom: 30px;
   }
@@ -371,17 +273,6 @@ ul {
     width: 15%;
     font-size: 0.8rem;
   }
-
- .libros li>ul {
-   left: 105px;
-   top: -5px;
-   min-width: 100px;
- }
-
- .libros li {
-   font-size: 0.7rem;
-   width: 100px;
- }
 
 }
 
@@ -397,13 +288,8 @@ ul {
   }
 
   #links {
-    width: 600px;
-    gap: 15px;
+       gap: 15px;
     margin-bottom: 40px;
   }
 
-  .misLinks {
-    width: 16%;
-    font-size: 1.2rem;
-  }
 }

@@ -1,0 +1,18 @@
+/* Seccion Menu Desplegable----------------------------------------------------- */
+/*Contenedor principal del menu desplegable es un seccion*/
+:root {
+    --Morado: #ede7f6;
+    --100: #d1c4e9;
+    --A100: #b388ff;
+    --A200: #7C4DFF;
+    --A400: #651FFF;
+    --A700: #6200ea;
+    --A0700: rgb(98, 0, 234, .8);
+    --A0100: rgb(98, 0, 234, .5);
+    --black: rgb(0,0,0,.5);
+}
+
+#menus{
+    margin-bottom: 60px;
+}
+

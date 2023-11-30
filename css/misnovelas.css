@@ -8,9 +8,7 @@
 }
 
 
-#menus {
-  margin-top: 0px;
-}
+
 
 #titulonovela {
   flex-grow: 1;
@@ -23,8 +21,6 @@
   flex-grow: 1;
 
 }
-
-
 
 #modulo1 {
   display: flex;

@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="./css/paginas.css">
   <link rel="stylesheet" href="./css/misrelatos.css">
+  <link rel="stylesheet" href="./css/menudesplegable.css" />
   <script src="./js/jquery-3.6.0.js"></script>
 </head>
 
@@ -34,7 +35,7 @@
     </header>
 
     <!-- Seccion Menu -->
-    <section id="links">
+    <div id="links">
       <a class="misLinks" id="a1" href="acercademi.html">Acerca<br />
         de mí</a>
       <a class="misLinks" id="a2" href="index.html">Al<br />
@@ -46,13 +47,13 @@
         libros</a>
       <a class="misLinks" id="a5" href="misnovelas.html">Mis<br />
         novelas</a>
-    </section>
+      </div>
 
     <!-- Sección menú desplegable -->
     <section id="menus">
-      <ul class="libros">
-        <li >Seleciona un Relato
-          <ul id="relato">
+      <ul class="ul-libro" id="ullibro1">
+        <li class ="li-libro" id="lilibro1" >Seleciona un Relato
+          <ul class="secciones" id="relato">
             <li id="r1">La Gotita</li>
             <li id="r2">Él</li>
             <li id="r3">Un alma y yo</li>
