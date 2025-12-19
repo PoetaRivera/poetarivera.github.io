@@ -19,7 +19,7 @@ ul {
 
 /* Primer ul que contiene el li libros */
 .ul-libro {
-    height: 30px;
+    height: auto;
     width: 70px;
 }
 
@@ -29,7 +29,8 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 30px;
+    height: auto;
+    min-height: 30px;
 
 }
 
@@ -57,7 +58,9 @@ ul {
     font-size: 1rem;
     font-family: "Caladea-Regular", sans-serif;
     width: 100px;
-    height: 30px;
+    height: auto;
+    min-height: 40px;
+    align-content: center;
     background-image: radial-gradient(black, black, var(--A100));
 }
 
@@ -100,14 +103,16 @@ ul {
     }
 
     .ul-libro {
-        width: 70px;
+        width: 100px;
 
     }
 
     .ul-libro li {
-        width: 70px;
+        width: 100px;
         font-size: 0.9rem;
-        height: 20px;
+        height: auto;
+        min-height: 35px;
+        align-content: center;
     }
 
 
@@ -132,13 +137,15 @@ ul {
     }
 
     .ul-libro {
-        width: 70px;
+        width: 100px;
     }
 
     .ul-libro li {
-        width: 70px;
+        width: 100px;
         font-size: 0.9rem;
-        height: 20px;
+        height: auto;
+        min-height: 35px;
+        align-content: center;
     }
 
     .ul-libro li>ul {
@@ -158,13 +165,15 @@ ul {
     }
 
     .ul-libro {
-        width: 70px;
+        width: 100px;
     }
 
     .ul-libro li {
-        width: 70px;
+        width: 100px;
         font-size: 0.9rem;
-        height: 20px;
+        height: auto;
+        min-height: 35px;
+        align-content: center;
     }
 
     .ul-libro li>ul {
