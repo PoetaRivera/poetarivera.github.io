@@ -89,6 +89,8 @@ function guardarMe(nombre, pais, password, comentario, ruta) {
       .catch((error) => {
         // Manejar errores
         console.log(error);
+        const mensajeEl = document.getElementById("mensaje");
+        if (mensajeEl) mensajeEl.innerHTML = "Error al conectar con el servidor. Intenta más tarde.";
       });
   }
 
@@ -126,6 +128,8 @@ function guardarMe(nombre, pais, password, comentario, ruta) {
       .catch((err) => {
         // Manejar errores
         console.log(err);
+        const mensajeEl = document.getElementById("mensaje");
+        if (mensajeEl) mensajeEl.innerHTML = "Error al enviar el comentario. Intenta más tarde.";
       });
   }
 
@@ -197,6 +201,8 @@ function guardarMe(nombre, pais, password, comentario, ruta) {
     })
     .catch((error) => {
       console.log(error);
+      const mensajeEl = document.getElementById("mensaje");
+      if (mensajeEl) mensajeEl.innerHTML = "Error al conectar con el servidor. Intenta más tarde.";
     });
 }
 let nombre, pais, password, comentario;

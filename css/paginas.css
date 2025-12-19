@@ -22,8 +22,8 @@
   --A200: #7C4DFF;
   --A400: #651FFF;
   --A700: #6200ea;
-  --A0700:rgb(98, 0, 234, .8);
-  --A0100:rgb(98, 0, 234, .5);
+  --A0700: rgb(98, 0, 234, .8);
+  --A0100: rgb(98, 0, 234, .5);
 }
 
 
@@ -51,10 +51,10 @@ body {
 #barraprincipal {
   display: flex;
   flex-direction: row;
-  background-image:radial-gradient(var(--100), var(--A100), var(--A200), var(--A700));
+  background-image: radial-gradient(var(--100), var(--A100), var(--A200), var(--A700));
   justify-content: space-between;
   border-style: inset;
- }
+}
 
 /* Contenedores Fotos */
 #foto2,
@@ -180,7 +180,7 @@ h1 {
   border: 1px solid var(--A700);
   border-radius: 5px;
   background-image: radial-gradient(black, black, var(--A100));
-  color: var(--A700);
+  color: white;
   text-decoration: none;
   text-align: center;
   font-size: 0.6rem;
@@ -194,8 +194,8 @@ h1 {
 
 #links a:hover {
   scale: 1.5;
-  background-image: radial-gradient(rgb(0,0,0,0.5), rgb(0, 0, 0, 0.5));
-  color:white;
+  background-image: radial-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5));
+  color: white;
 }
 
 /* Link mas a la derecha */
@@ -221,7 +221,7 @@ h1 {
   #links {
     gap: 4px;
     margin-bottom: 10px;
-    
+
   }
 
   .misLinks {
@@ -230,6 +230,7 @@ h1 {
   }
 
 }
+
 /*-------------------------------------------------------*/
 @media (min-width : 481px) {
   #barraprincipal {
@@ -242,7 +243,7 @@ h1 {
   }
 
   #links {
-   
+
     gap: 4px;
     margin-bottom: 20px;
   }
@@ -288,7 +289,7 @@ h1 {
   }
 
   #links {
-       gap: 15px;
+    gap: 15px;
     margin-bottom: 40px;
   }
 
