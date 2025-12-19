@@ -6,16 +6,29 @@ function mostrarMe(ruta) {
   const rutaServidor = ruta;
 
   // Definicion de funcion muestra un comentario
+  // Definicion de funcion muestra un comentario
   const crearNuevoComentario = (comentario) => {
-    const linea = document.createElement("ul");
-    const contenido = `<li class="li-comentarios">
-        <div class="div-comentarios" id="msg">
-            <strong>${comentario.author}</strong> <small>(${comentario.metadata?.country || 'Mundo'})</small><br>
-            ${comentario.content}
+    // Extraer inicial para avatar
+    const autor = comentario.author || "Anónimo";
+    const inicial = autor.charAt(0).toUpperCase();
+    const pais = comentario.metadata?.country || 'Mundo';
+
+    const card = document.createElement("div");
+    card.classList.add("comment-card");
+
+    const contenido = `
+      <div class="comment-header">
+        <div class="comment-avatar">${inicial}</div>
+        <div class="comment-info">
+          <span class="comment-author">${autor}</span>
+          <span class="comment-country">${pais}</span>
         </div>
-      </li>`;
-    linea.innerHTML = contenido;
-    return linea;
+      </div>
+      <div class="comment-body">${comentario.content}</div>
+    `;
+
+    card.innerHTML = contenido;
+    return card;
   };
 
   // Definicion de funcion obtener comentarios
@@ -42,7 +55,14 @@ function mostrarMe(ruta) {
     })
     .catch((error) => {
       console.error(error);
-      alert("Ocurrio error al cargar comentarios");
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Ocurrió un error al cargar los comentarios',
+        background: '#1a1a1a',
+        color: '#fff',
+        confirmButtonColor: '#6200ea'
+      });
     });
 }
 
@@ -51,7 +71,14 @@ function mostrarMe(ruta) {
 function ocultarMe() {
   const padreUl = document.querySelector("#comentarios");
 
-  padreUl.firstChild ? eliminar() : alert("No hay comentarios que ocultar");
+  padreUl.firstChild ? eliminar() : Swal.fire({
+    title: 'Aviso',
+    text: 'No hay comentarios que ocultar',
+    icon: 'info',
+    background: '#1a1a1a',
+    color: '#fff',
+    confirmButtonColor: '#6200ea'
+  });
 
   function eliminar() {
     while (padreUl.firstChild) {
@@ -91,8 +118,15 @@ function guardarMe(nombre, pais, password, comentario, ruta) {
     })
     .then((data) => {
       console.log("Comentario guardado:", data);
-      const mensajeEl = document.getElementById("mensaje");
-      if (mensajeEl) mensajeEl.innerHTML = "Tu comentario se ha guardado exitosamente.";
+
+      Swal.fire({
+        icon: 'success',
+        title: '¡Guardado!',
+        text: 'Tu comentario se ha guardado exitosamente.',
+        background: '#1a1a1a',
+        color: '#fff',
+        confirmButtonColor: '#6200ea'
+      });
 
       // Limpiar formulario opcionalmente
       document.getElementById("comentario").value = "";
@@ -101,8 +135,14 @@ function guardarMe(nombre, pais, password, comentario, ruta) {
     })
     .catch((error) => {
       console.error(error);
-      const mensajeEl = document.getElementById("mensaje");
-      if (mensajeEl) mensajeEl.innerHTML = "Error al enviar el comentario. Intenta más tarde.";
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Error al enviar el comentario. Intenta más tarde.',
+        background: '#1a1a1a',
+        color: '#fff',
+        confirmButtonColor: '#6200ea'
+      });
     });
 }
 
@@ -167,7 +207,14 @@ function guardar() {
 
   // Validar básico antes de enviar
   if (!nombre || !pais || !comentario) {
-    alert("Por favor completa nombre, país y comentario.");
+    Swal.fire({
+      icon: 'warning',
+      title: 'Faltan datos',
+      text: 'Por favor completa nombre, país y comentario.',
+      background: '#1a1a1a',
+      color: '#fff',
+      confirmButtonColor: '#6200ea'
+    });
     return;
   }
 
