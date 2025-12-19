@@ -111,7 +111,7 @@ Contenedor pensamientos y botones */
 .contenedor-redes {
   margin-bottom: 10px;
   margin-top: 10px;
-  
+
 }
 
 .redes {
@@ -269,15 +269,18 @@ Contenedor pensamientos y botones */
   margin-bottom: 3px;
 }
 
-.textarea-comentarios {
+.div-comentarios {
   margin-bottom: 10px;
-  background-color: #000;
-  color: var(--A700);
+  background-color: #1a1a1a;
+  color: var(--A100);
   min-width: 200px;
-  height: 50px;
-  padding-left: 10px;
-  padding-top: 3px;
-
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--A700);
+  font-family: inherit;
+  white-space: pre-wrap;
+  /* Keeps line breaks */
 }
 
 /* Todos los subtitulos*/
@@ -297,18 +300,19 @@ h3 {
   h3 {
     font-size: 1.2rem;
   }
-  .pensamientos-boton{
-    height:15px;
+
+  .pensamientos-boton {
+    height: 15px;
   }
 
-  .flecha{
+  .flecha {
     width: 25px;
   }
 }
 
 /*-------------------------------------------------------*/
 @media (min-width : 481px) {
-h3 {
+  h3 {
     font-size: 1.2rem;
   }
 
@@ -324,29 +328,29 @@ h3 {
 /*-------------------------------------------------------*/
 @media (min-width : 769px) {
   h3 {
-      font-size: 1.3rem;
-    }
-  
-    .pensamientos-boton {
-      height: 20px;
-    }
-  
-    .flecha {
-      width: 30px;
-    }
+    font-size: 1.3rem;
+  }
+
+  .pensamientos-boton {
+    height: 20px;
+  }
+
+  .flecha {
+    width: 30px;
+  }
 }
 
 /*-------------------------------------------------------*/
 @media (min-width : 1025px) {
   h3 {
-      font-size: 1.4rem;
-    }
-  
-    .pensamientos-boton {
-      height: 25px;
-    }
-  
-    .flecha {
-      width: 35px;
-    }
+    font-size: 1.4rem;
+  }
+
+  .pensamientos-boton {
+    height: 25px;
+  }
+
+  .flecha {
+    width: 35px;
+  }
 }

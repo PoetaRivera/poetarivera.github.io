@@ -1,5 +1,7 @@
-$(document).ready(function () {
-  $("#relato li").mouseover(presentar);
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("#relato li").forEach(function (el) {
+    el.addEventListener("mouseover", presentar);
+  });
 });
 
 const nombreRelato = {

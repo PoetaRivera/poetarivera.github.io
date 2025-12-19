@@ -1,9 +1,10 @@
 /* Seccion Menu Desplegable----------------------------------------------------- */
 /*Contenedor principal del menu desplegable es un seccion*/
 
-#seleccione{
-color:var(--A700);
+#seleccione {
+    color: var(--A700);
 }
+
 #menus {
     display: flex;
     justify-content: flex-start;
@@ -20,7 +21,7 @@ ul {
 .ul-libro {
     height: 30px;
     width: 70px;
-   }
+}
 
 
 .li-libro {
@@ -35,16 +36,17 @@ ul {
 
 .ul-libro li>ul {
     display: none;
-    position: relative;
-    left: 105px;
-    top: -5px;
+    position: absolute;
+    left: 0;
+    top: 100%;
     min-width: 100px;
-    max-height: 10px;
+    z-index: 1000;
 }
 
 /*Para todos los li*/
 .ul-libro li {
     display: block;
+    position: relative;
     padding: 6px 3px 3px 3px;
     border-style: inset;
     border: 2px solid var(--A700);
@@ -66,11 +68,11 @@ ul {
 
 .ul-secciones .li-secciones>.seccion {
     display: none;
-    position: relative;
-    left: 70px;
-    top: 0px;
+    position: absolute;
+    left: 100%;
+    top: 0;
     min-width: 100px;
-    max-height: 10px;
+    z-index: 1000;
 }
 
 .ul-secciones .li-secciones:hover>.seccion {
@@ -91,7 +93,7 @@ ul {
 /*Queries*/
 @media (min-width : 300px) {
 
-   /*------menu desplegable------*/
+    /*------menu desplegable------*/
     #menus {
         gap: 15px;
     }
@@ -111,23 +113,23 @@ ul {
 
     .ul-libro li>ul {
         display: none;
-        position: relative;
-        left: -3px;
-        top: 10px;
+        position: absolute;
+        left: 0;
+        top: 100%;
         min-width: 100px;
-        max-height: 10px;
+        z-index: 1000;
     }
 }
 
 /*-------------------------------------------------------*/
 @media (min-width : 481px) {
 
-/*------menu desplegable------*/
+    /*------menu desplegable------*/
     #menus {
-    gap: 35px;
-    
+        gap: 35px;
+
     }
-    
+
     .ul-libro {
         width: 70px;
     }
@@ -140,44 +142,42 @@ ul {
 
     .ul-libro li>ul {
         display: none;
-        position: relative;
-        left: -3px;
-        top: 10px;
+        position: absolute;
+        left: 0;
+        top: 100%;
         min-width: 100px;
-        max-height: 10px;
+        z-index: 1000;
     }
 }
 
 /*-------------------------------------------------------*/
 @media (min-width : 769px) {
     #menus {
-            gap: 45px;
-             }
-    
-        .ul-libro {
-            width: 70px;
-        }
-    
-        .ul-libro li {
-            width: 70px;
-            font-size: 0.6rem;
-            height: 20px;
-        }
-    
-        .ul-libro li>ul {
-            display: none;
-            position: relative;
-            left: -3px;
-            top: 10px;
-            min-width: 100px;
-            max-height: 10px;
-        }
+        gap: 45px;
+    }
 
-   
+    .ul-libro {
+        width: 70px;
+    }
+
+    .ul-libro li {
+        width: 70px;
+        font-size: 0.6rem;
+        height: 20px;
+    }
+
+    .ul-libro li>ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        min-width: 100px;
+        z-index: 1000;
+    }
+
+
 
 }
 
 /*-------------------------------------------------------*/
-@media (min-width : 1025px) {
-   
-}
+@media (min-width : 1025px) {}

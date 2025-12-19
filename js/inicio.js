@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   /*A la escucha todos los elemtos "a" con el fin de aplicar las funciones resaltar y restaurar 
   en caso de hacer mouseover o mouseout respectivamente sobre ellos*/
   const enlaces = document.querySelectorAll("a");
@@ -8,8 +8,13 @@ $(document).ready(function () {
   }
 
   //A la escucha los botones mass y menoss que mueven los pensamientos
-  mass.addEventListener("click", cambiar);
-  menoss.addEventListener("click", cambiar);
+  const mass = document.getElementById("mass");
+  const menoss = document.getElementById("menoss");
+  const imgMas = document.getElementById("imgMas");
+  const imgMenos = document.getElementById("imgMenos");
+
+  if (mass) mass.addEventListener("click", (e) => cambiar(e, mass, imgMas, menoss, imgMenos));
+  if (menoss) menoss.addEventListener("click", (e) => cambiar(e, mass, imgMas, menoss, imgMenos));
 });
 const youtube = document.getElementById("youtube");
 youtube.addEventListener("click", ir);
@@ -28,7 +33,7 @@ function ir(e) {
 
 let i = 0;
 
-function cambiar(e) {
+function cambiar(e, mass, imgMas, menoss, imgMenos) {
   let exitador1 = e.target == mass || e.target == imgMas;
   if (exitador1) {
     ++i;
@@ -49,11 +54,11 @@ function cambiar(e) {
 /* Funciones que agregaga o quitan el estilo a los botones de navegación
 al hacer mouseover o mouseout sobre ellos */
 function resaltar(e) {
-  $(`"#links #${e.target}").addClass("resaltar"`);
+  e.currentTarget.classList.add("resaltar");
 }
 
 function restaurar(e) {
-  $(`"#links #${e.target}").removeClass("resaltar"`);
+  e.currentTarget.classList.remove("resaltar");
 }
 
 /* Arreglo con todos los pensamientos 

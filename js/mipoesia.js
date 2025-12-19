@@ -1,20 +1,21 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   //libro:Voces del alma
-  $("#libro1").mouseover(ponertitulo);
-  $("#amor1 li").mouseover(presentar);
-  $("#desamor1 li").mouseover(presentar);
-  $("#deseo1 li").mouseover(presentar);
-  $("#vida1 li").mouseover(presentar);
+  const lb1 = document.getElementById("libro1");
+  if (lb1) lb1.addEventListener("mouseover", ponertitulo);
+
+  document.querySelectorAll("#amor1 li, #desamor1 li, #deseo1 li, #vida1 li").forEach(el => el.addEventListener("mouseover", presentar));
+
   //libro:El perfume de la espera
-  $("#libro2").mouseover(ponertitulo);
-  $("#amor2 li").mouseover(presentar);
-  $("#intimidad li").mouseover(presentar);
-  $("#anoranza li").mouseover(presentar);
-  $("#vida2 li").mouseover(presentar);
+  const lb2 = document.getElementById("libro2");
+  if (lb2) lb2.addEventListener("mouseover", ponertitulo);
+
+  document.querySelectorAll("#amor2 li, #intimidad li, #anoranza li, #vida2 li").forEach(el => el.addEventListener("mouseover", presentar));
+
   //libro:Relatos de pueblo y poemas
-  $("#libro3").mouseover(ponertitulo);
-  $("#amor3 li").mouseover(presentar);
-  $("#varios li").mouseover(presentar);
+  const lb3 = document.getElementById("libro3");
+  if (lb3) lb3.addEventListener("mouseover", ponertitulo);
+
+  document.querySelectorAll("#amor3 li, #varios li").forEach(el => el.addEventListener("mouseover", presentar));
 });
 
 const libros = [
@@ -26,7 +27,7 @@ const libros = [
   {
     libro: "libro2",
     titulo: "El perfume de la espera",
-    src:  "./poemas/elperfumedelaespera/imagenelperfumedelaespera.html",
+    src: "./poemas/elperfumedelaespera/imagenelperfumedelaespera.html",
   },
   {
     libro: "libro3",
@@ -38,24 +39,25 @@ const libros = [
 //Cambia el titulo del libro y la portada según el menú
 function ponertitulo(e) {
   let i = 3;
-  if (e.target == libro1) {
+  // Assuming libro1, libro2, libro3 are mostly targeted by ID reference in event.target
+  if (e.target.id == "libro1") {
     i = 0;
-  } else if (e.target == libro2) {
+  } else if (e.target.id == "libro2") {
     i = 1;
-  } else if (e.target == libro3) {
+  } else if (e.target.id == "libro3") {
     i = 2;
   }
 
   try {
     const miTitulo = libros[i].titulo;
-   // const miTitulo1 = miTitulo.replace(/ /g, "");
     const ruta = libros[i].src;
 
-    $("#enlace1").replaceWith(`<h2 id="enlace1">Libro: ${miTitulo} </h2>`);
-    $("#texto").replaceWith(
-      `<iframe id="texto" title="Texto de poema"  src="${ruta}"> </iframe>`
-    );
-  } catch (error) {}
+    const enlace1 = document.getElementById("enlace1");
+    if (enlace1) enlace1.outerHTML = `<h2 id="enlace1">Libro: ${miTitulo} </h2>`;
+
+    const texto = document.getElementById("texto");
+    if (texto) texto.outerHTML = `<iframe id="texto" title="Texto de poema"  src="${ruta}"> </iframe>`;
+  } catch (error) { }
 }
 
 const vocesDelAlma = {
@@ -125,53 +127,45 @@ const relatosYPoemas = {
 };
 
 const audiosvocesdelalma = [3, 10, 13, 16, 17];
-const audioselperfumedelaespera = [20,21,23,26,28];
+const audioselperfumedelaespera = [20, 21, 23, 26, 28];
 
 function presentar(e) {
   let pi = e.target.id.toString();
   let piNumero = parseInt(pi.replace(/p/g, ""));
 
+  const texto = document.getElementById("texto");
+  const hayaudio = document.getElementById("hayaudio");
+  const audio = document.getElementById("audio");
+
   if (piNumero < 20) {
     let ruta = vocesDelAlma[pi];
-    $("#texto").replaceWith(
-      `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/vocesdelalma/${ruta}.html"> </iframe>`
-    );
+    if (texto) texto.outerHTML = `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/vocesdelalma/${ruta}.html"> </iframe>`;
 
-    audiosvocesdelalma.forEach((elemento) => {
-     
-      if ((elemento == piNumero)) {
-       
-        $("#hayaudio").replaceWith(' <div id="hayaudio">Espero te guste</div>');
-        $("#audio").replaceWith(
-          `<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/${ruta}.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>`
-        );
-      }else{}
-    });
-  } else if (piNumero > 19  && piNumero < 43) {
+    let foundAudio = false;
+    for (const elemento of audiosvocesdelalma) {
+      if (elemento == piNumero) {
+        if (hayaudio) hayaudio.outerHTML = '<div id="hayaudio">Espero te guste</div>';
+        if (audio) audio.outerHTML = `<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/${ruta}.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>`;
+        foundAudio = true;
+        break; // Stop after finding match
+      }
+    }
+  } else if (piNumero > 19 && piNumero < 43) {
     let ruta = elPerfumeDeLaEspera[pi];
-    $("#texto").replaceWith(
-      `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/elperfumedelaespera/${ruta}.html"> </iframe>`
-    );
+    if (texto) texto.outerHTML = `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/elperfumedelaespera/${ruta}.html"> </iframe>`;
 
-    audioselperfumedelaespera.forEach((elemento) => {
-     
-      if ((elemento == piNumero)) {
+    let foundAudio = false;
+    for (const elemento of audioselperfumedelaespera) {
+      if (elemento == piNumero) {
+        if (hayaudio) hayaudio.outerHTML = '<div id="hayaudio">Espero te guste</div>';
+        if (audio) audio.outerHTML = `<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/${ruta}.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>`;
+        foundAudio = true;
+        break;
+      }
+    }
 
-        $("#hayaudio").replaceWith(' <div id="hayaudio">Espero te guste</div>');
-        $("#audio").replaceWith(
-          `<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/${ruta}.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>`
-        );
-      }else{}
-    });
-
-  } else if(piNumero > 42){
+  } else if (piNumero > 42) {
     let ruta = relatosYPoemas[pi];
-    
-    $("#texto").replaceWith(
-      `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/relatosypoemas/${ruta}.html"> </iframe>`
-    );
+    if (texto) texto.outerHTML = `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/relatosypoemas/${ruta}.html"> </iframe>`;
   }
-
- 
- 
 }
