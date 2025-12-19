@@ -51,10 +51,11 @@ ul {
     border-style: inset;
     border: 2px solid var(--A700);
     border-radius: 5px;
-    color: var(--A700);
+    color: white;
     text-decoration: none;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-family: "Caladea-Regular", sans-serif;
     width: 100px;
     height: 30px;
     background-image: radial-gradient(black, black, var(--A100));
@@ -105,7 +106,7 @@ ul {
 
     .ul-libro li {
         width: 70px;
-        font-size: 0.6rem;
+        font-size: 0.9rem;
         height: 20px;
     }
 
@@ -136,7 +137,7 @@ ul {
 
     .ul-libro li {
         width: 70px;
-        font-size: 0.6rem;
+        font-size: 0.9rem;
         height: 20px;
     }
 
@@ -162,7 +163,7 @@ ul {
 
     .ul-libro li {
         width: 70px;
-        font-size: 0.6rem;
+        font-size: 0.9rem;
         height: 20px;
     }
 
