@@ -16,18 +16,35 @@ function mostrarMe(ruta) {
     const card = document.createElement("div");
     card.classList.add("comment-card");
 
-    const contenido = `
-      <div class="comment-header">
-        <div class="comment-avatar">${inicial}</div>
-        <div class="comment-info">
-          <span class="comment-author">${autor}</span>
-          <span class="comment-country">${pais}</span>
-        </div>
-      </div>
-      <div class="comment-body">${comentario.content}</div>
-    `;
+    const header = document.createElement("div");
+    header.classList.add("comment-header");
 
-    card.innerHTML = contenido;
+    const avatar = document.createElement("div");
+    avatar.classList.add("comment-avatar");
+    avatar.textContent = inicial;
+
+    const info = document.createElement("div");
+    info.classList.add("comment-info");
+
+    const spanAutor = document.createElement("span");
+    spanAutor.classList.add("comment-author");
+    spanAutor.textContent = autor;
+
+    const spanPais = document.createElement("span");
+    spanPais.classList.add("comment-country");
+    spanPais.textContent = pais;
+
+    const body = document.createElement("div");
+    body.classList.add("comment-body");
+    body.textContent = comentario.content;
+
+    info.appendChild(spanAutor);
+    info.appendChild(spanPais);
+    header.appendChild(avatar);
+    header.appendChild(info);
+    card.appendChild(header);
+    card.appendChild(body);
+
     return card;
   };
 

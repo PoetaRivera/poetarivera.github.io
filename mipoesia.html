@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -53,6 +53,11 @@
         <source src="audios/y fueron primavera.mp3" type="audio/mpeg" />
         Tu navegador no admite mp3
       </audio>
+    </div>
+
+    <!-- Búsqueda de poemas -->
+    <div id="buscador">
+      <input type="search" id="inputBuscar" placeholder="Buscar poema..." autocomplete="off" />
     </div>
 
     <!-- Seccion Menu Desplegable -->
@@ -200,8 +205,13 @@
     </div>
 
     <div id="modulo1">
-      <iframe id="texto" title="Texto de poema" aling src="./imagenes/mifoto3.png">
+      <iframe id="texto" title="Texto de poema" src="./imagenes/mifoto3.png">
       </iframe>
+    </div>
+
+    <div id="navegacion-poemas">
+      <button id="btnAnterior" onclick="anteriorPoema()">&#8592; Anterior</button>
+      <button id="btnSiguiente" onclick="siguientePoema()">Siguiente &#8594;</button>
     </div>
   </div>
   <script src="./js/mipoesia.js"></script>

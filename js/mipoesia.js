@@ -1,3 +1,5 @@
+let poemaActual = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
   //libro:Voces del alma
   const lb1 = document.getElementById("libro1");
@@ -16,6 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
   if (lb3) lb3.addEventListener("mouseover", ponertitulo);
 
   document.querySelectorAll("#amor3 li, #varios li").forEach(el => el.addEventListener("mouseover", presentar));
+
+  // Búsqueda de poemas
+  const inputBuscar = document.getElementById("inputBuscar");
+  if (inputBuscar) {
+    inputBuscar.addEventListener("input", function () {
+      const termino = this.value.toLowerCase().trim();
+      document.querySelectorAll("#menus li[id^='p']").forEach(li => {
+        const coincide = termino === "" || li.textContent.toLowerCase().includes(termino);
+        li.style.display = coincide ? "" : "none";
+      });
+    });
+  }
 });
 
 const libros = [
@@ -129,9 +143,9 @@ const relatosYPoemas = {
 const audiosvocesdelalma = [3, 10, 13, 16, 17];
 const audioselperfumedelaespera = [20, 21, 23, 26, 28];
 
-function presentar(e) {
-  let pi = e.target.id.toString();
-  let piNumero = parseInt(pi.replace(/p/g, ""));
+function cargarPoema(piNumero) {
+  poemaActual = piNumero;
+  const pi = "p" + piNumero;
 
   const texto = document.getElementById("texto");
   const hayaudio = document.getElementById("hayaudio");
@@ -140,32 +154,38 @@ function presentar(e) {
   if (piNumero < 20) {
     let ruta = vocesDelAlma[pi];
     if (texto) texto.outerHTML = `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/vocesdelalma/${ruta}.html"> </iframe>`;
-
-    let foundAudio = false;
     for (const elemento of audiosvocesdelalma) {
       if (elemento == piNumero) {
         if (hayaudio) hayaudio.outerHTML = '<div id="hayaudio">Espero te guste</div>';
-        if (audio) audio.outerHTML = `<audio controls autoplay id="audio"> <source  src="audios/vocesdelalma/${ruta}.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>`;
-        foundAudio = true;
-        break; // Stop after finding match
+        if (audio) audio.outerHTML = `<audio controls autoplay id="audio"><source src="audios/vocesdelalma/${ruta}.mp3" type="audio/mpeg" />Tu navegador no admite mp3</audio>`;
+        break;
       }
     }
   } else if (piNumero > 19 && piNumero < 43) {
     let ruta = elPerfumeDeLaEspera[pi];
     if (texto) texto.outerHTML = `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/elperfumedelaespera/${ruta}.html"> </iframe>`;
-
-    let foundAudio = false;
     for (const elemento of audioselperfumedelaespera) {
       if (elemento == piNumero) {
         if (hayaudio) hayaudio.outerHTML = '<div id="hayaudio">Espero te guste</div>';
-        if (audio) audio.outerHTML = `<audio controls autoplay id="audio"> <source  src="audios/elperfumedelaespera/${ruta}.mp3" type="audio/mpeg" autoplay /> Tu navegador no admite mp3  </audio>`;
-        foundAudio = true;
+        if (audio) audio.outerHTML = `<audio controls autoplay id="audio"><source src="audios/elperfumedelaespera/${ruta}.mp3" type="audio/mpeg" />Tu navegador no admite mp3</audio>`;
         break;
       }
     }
-
   } else if (piNumero > 42) {
     let ruta = relatosYPoemas[pi];
     if (texto) texto.outerHTML = `<iframe id="texto" title="Texto de poema" height="600px" width="400px" src="./poemas/relatosypoemas/${ruta}.html"> </iframe>`;
   }
+}
+
+function anteriorPoema() {
+  if (poemaActual > 1) cargarPoema(poemaActual - 1);
+}
+
+function siguientePoema() {
+  if (poemaActual > 0 && poemaActual < 57) cargarPoema(poemaActual + 1);
+}
+
+function presentar(e) {
+  const piNumero = parseInt(e.target.id.replace(/p/g, ""));
+  cargarPoema(piNumero);
 }

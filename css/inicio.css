@@ -1,12 +1,3 @@
-:root {
-  --Morado: rgb(237, 231, 246, 1);
-  --100: rgb(209, 196, 233, 1);
-  --A100: rgb(179, 136, 255, 1);
-  --A200: #7c4dff;
-  --A400: #651fff;
-  --A700: rgb(98, 0, 234, 1);
-}
-
 /*Seccion Encabezado*/
 #barratitulo {
   /*Contenedor-Header */
