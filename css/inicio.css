@@ -225,18 +225,27 @@ Contenedor pensamientos y botones */
   scale: 1.5;
 }
 
+.contenedor-botones-y-comentarios {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  background-color: black;
+}
+
 .contenedor-mostraryborrar-comentarios {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
   box-sizing: border-box;
   background-color: black;
   color: white;
   border: none;
-  gap: 5px;
+  gap: 10px;
   padding: 10px;
-  align-self: center;
-  min-width: 99%;
-
+  min-width: 140px;
+  flex-shrink: 0;
 }
 
 /*Boton guardar comentarios*/
@@ -352,10 +361,11 @@ h3 {
 
 .ver-comentarios {
   display: flex;
-  flex-direction: column; /* Apilar tarjetas verticalmente */
-  gap: 15px; /* Espacio entre tarjetas */
-  align-items: center;
-  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  flex: 1;
+  min-width: 0;
 }
 
 .comment-card {
