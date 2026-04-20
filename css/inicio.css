@@ -254,15 +254,7 @@ Contenedor pensamientos y botones */
 }
 
 .ver-comentarios {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: start;
-  padding: 10px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  width: 100vw;
+  padding: 10px 10px 10px 0;
 }
 
 .p-nombre {
