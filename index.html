@@ -32,10 +32,39 @@
   <meta property="twitter:image" content="https://poetarivera.github.io/imagenes/foto4.png" />
 
   <title>Página Principal | Poesía de Nelson Rivera</title>
-
+  <link rel="canonical" href="https://poetarivera.github.io/" />
 
   <link rel="stylesheet" href="./css/paginas.css">
   <link rel="stylesheet" href="./css/inicio.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://poetarivera.github.io/#autor",
+        "name": "Nelson Rivera",
+        "nationality": "Salvadoreño",
+        "jobTitle": "Poeta y escritor",
+        "url": "https://poetarivera.github.io/",
+        "sameAs": [
+          "https://www.facebook.com/nelson.rivera",
+          "https://www.youtube.com/@poetanelsonrivera"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://poetarivera.github.io/#sitio",
+        "url": "https://poetarivera.github.io/",
+        "name": "Poesía de Nelson Rivera",
+        "description": "Obra literaria de Nelson Rivera: poesía, novelas y relatos de El Salvador.",
+        "author": { "@id": "https://poetarivera.github.io/#autor" },
+        "inLanguage": "es"
+      }
+    ]
+  }
+  </script>
 
 
 
@@ -177,6 +206,7 @@
   <script>if (typeof Swal === 'undefined') { document.write('<script src="https://unpkg.com/sweetalert2@11"><\/script>'); }</script>
   <script src="./js/inicio.js"></script>
   <script src="./js/servicio-Crud.js"></script>
+<script src="./js/tema.js"></script>
 </body>
 
 </html>
